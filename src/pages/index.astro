@@ -1,17 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header';
+import Header from "../components/Header.astro"
 import PageIndex from "../components/PageIndex"
+import DropdownMenu from '../components/DropdownMenu.astro';
 ---
 
 <Layout title="Frontend Mentor | Intro section with dropdown navigation.">
-    <Header client:only="react"/>
+    <Header />
 	<main class="container">
 	  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-[7rem] lg:pt-5 text-center lg:text-left max-w-[1024px] mx-auto">
   		<div class="flex flex-col lg:flex lg:flex-row items-center relative z-0">
   		  <div>
-				<h1 class="text-almost-black text-3xl lg:text-[5rem] lg:leading-[5rem] font-bold">Maquinas de tatuar</h1>
-        <PageIndex client:only="react" />
+				  <h1 class="text-almost-black text-3xl lg:text-[5rem] lg:leading-[5rem] font-bold pb-2">Maquinas de tatuar</h1>
+          <DropdownMenu />
   				<p class=" py-5 lg:py-[3rem] lg:text-xl">
   					Partamos por lo básico. ¿Qué es una <strong>máquina de tatuar</strong>?<br/><br/>
             Una máquina de tatuar es un dispositivo mecánico manual utilizado para crear tatuajes, es decir, marcas permanentes en la piel con tinta indeleble.<br/><br/>

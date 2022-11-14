@@ -1,0 +1,43 @@
+---
+import logo from "../../public/images/logo.svg"
+import DropdownMenu from "./DropdownMenu.astro";
+
+export interface NavMenuInfo {
+  title: string,
+  subMenuList: Array<{
+    title: string,
+    link: string
+  }>
+}
+
+
+// En este array se agregan los titulos de los Drop down menus en la navBar //
+const navMenuInfo: NavMenuInfo[] = [
+    {
+      title: "Tipos", 
+      subMenuList: [{title: "Sub Tipo1", link:"https://www.google.cl/"}, {title: "Sub Tipo2", link: ""}, {title: "Sub Tipo3", link: ""}, {title: "Sub Tipo4", link: ""}]   
+    }, 
+    {
+      title: "Marcas", 
+      subMenuList: [{title: "Sub Marca1", link:"https://www.google.cl/"}, {title: "Sub Marca2", link: ""}, {title: "Sub Marca3", link: ""}, {title: "Sub Marca4", link: ""}] 
+    } 
+  ]
+
+  // En este array se agregan los titulos de los NavMenuLink en la navBar //
+
+  const navMenuLinks= [ "Link1", "Link2","Link3"]
+---
+
+<header>
+    <div class='flex py-5 px-3 bg-slate-300'>
+      <div class='flex item-center pt-3'>
+        <img src={logo} alt="Logo" class='bg-slate-200'/>
+      </div>
+      <div class='ml-5 flex-grow flex items-center z-20'>
+        {navMenuInfo.map(navMenu => (
+            <DropdownMenu title={navMenu.title} subMenuList={navMenu.subMenuList} />
+        ))}
+        
+      </div>
+    </div>
+  </header>
