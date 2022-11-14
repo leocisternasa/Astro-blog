@@ -1,81 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Header from '../components/Header';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+<Layout title="Frontend Mentor | Intro section with dropdown navigation.">
+    <Header client:only="react"/>
+	<main class="container">
+	  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-[7rem] lg:pt-5 text-center lg:text-left max-w-[1024px] mx-auto">
+  		<div class="flex flex-col lg:flex lg:flex-row items-center relative z-0">
+  		  <div>
+				<h1 class="text-almost-black text-3xl lg:text-[5rem] lg:leading-[5rem] font-bold">Maquinas de tatuar</h1>
+  				<p class="py-5 lg:py-[3rem] lg:text-xl">
+  					Partamos por lo básico. ¿Qué es una <strong>máquina de tatuar</strong>?<br/><br/>
+            Una máquina de tatuar es un dispositivo mecánico manual utilizado para crear tatuajes, es decir, marcas permanentes en la piel con tinta indeleble.<br/><br/>
+  				</p>
+  		  </div>  		  
+  		</div>
+  		<div class="order-first lg:order-last mt-10">
+	  		<img class="lg:hidden mb-9"  src="images/akram-huseyn-smtP9zIj6qU-unsplash.jpg" alt="Hero">
+	  		<img class="hidden lg:block"  src="images/akram-huseyn-smtP9zIj6qU-unsplash.jpg" alt="Hero">
+  		</div>
+		</div>
 	</main>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
