@@ -1,6 +1,7 @@
 ---
 import logo from "../../public/images/logo.svg"
 import DropdownMenu from "./DropdownMenu.astro";
+import NavMenuLink from "../components/NavMenuLink.astro"
 
 export interface NavMenuInfo {
   title: string,
@@ -15,17 +16,17 @@ export interface NavMenuInfo {
 const navMenuInfo: NavMenuInfo[] = [
     {
       title: "Tipos", 
-      subMenuList: [{title: "Sub Tipo1", link:"https://www.google.cl/"}, {title: "Sub Tipo2", link: ""}, {title: "Sub Tipo3", link: ""}, {title: "Sub Tipo4", link: ""}]   
+      subMenuList: [{title: "Sub Tipo1", link:"https://www.google.cl/"}, {title: "Sub Tipo2", link: "#"}, {title: "Sub Tipo3", link: "#"}, {title: "Sub Tipo4", link: "#"}]   
     }, 
     {
       title: "Marcas", 
-      subMenuList: [{title: "Sub Marca1", link:"https://www.google.cl/"}, {title: "Sub Marca2", link: ""}, {title: "Sub Marca3", link: ""}, {title: "Sub Marca4", link: ""}] 
+      subMenuList: [{title: "Sub Marca1", link:"https://www.google.cl/"}, {title: "Sub Marca2", link: "#"}, {title: "Sub Marca3", link: "#"}, {title: "Sub Marca4", link: "#"}] 
     } 
   ]
 
   // En este array se agregan los titulos de los NavMenuLink en la navBar //
 
-  const navMenuLinks= [ "Link1", "Link2","Link3"]
+  const navMenuLinks= [ {title: "Link1", url:"http://www.google.cl"},{title: "Link2", url:"http://www.google.cl"}]
 ---
 
 <header>
@@ -34,9 +35,12 @@ const navMenuInfo: NavMenuInfo[] = [
         <img src={logo} alt="Logo" class='bg-slate-200'/>
       </div>
       <div class='ml-5 flex-grow flex items-center z-20'>
-        {navMenuInfo.map(navMenu => (
+        { navMenuInfo.map(navMenu => (
             <DropdownMenu title={navMenu.title} subMenuList={navMenu.subMenuList} />
         ))}
+        { navMenuLinks.map(link=>(
+           <NavMenuLink title={link.title} url={link.url}/> 
+        )) }
         
       </div>
     </div>
