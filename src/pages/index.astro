@@ -4,6 +4,14 @@ import Header from "../components/Header.astro"
 import PageIndex from "../components/PageIndex.astro"
 import BackToIndexButton from '../components/BackToIndexButton.astro';
 
+
+
+const pageIndexProps = [
+  {
+    seccionTitle: "Tipos de máquinas de Tatuar",
+    subSeccions: [{ title: "Tipos de máquinas de Tatuar", link: "#tipos-maquinas-de-tatuar"}, { title: "Máquinas de tatuar de bobina", link: "#maquinas-tatuar-bobina"}, { title: "Máquinas de tatuar rotativas", link: "#maquinas-tatuar-rotativas"}, { title: "Máquinas de tatuar tipo Pen", link: "#maquinas-tatuar-pen"}, { title: "Máquinas de tatuar Neumáticas", link: "#maquinas-tatuar-neumaticas"}]
+  }
+]
 ---
 
 <Layout title="Frontend Mentor | Intro section with dropdown navigation.">
@@ -23,7 +31,7 @@ import BackToIndexButton from '../components/BackToIndexButton.astro';
         <img class="block object-scale-down rounded"  src="images/máquinas-tinta-y-bosquejo-del-tatuaje-74235416.jpg" alt="Hero">
       </div>
       <div class="flex mt-5">
-      <PageIndex />
+      <PageIndex seccions={pageIndexProps} />
       </div>
       <div class="flex flex-col lg:flex lg:flex-row items-center relative z-0">
   		  <div>
