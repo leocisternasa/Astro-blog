@@ -15,25 +15,25 @@ export interface NavMenuInfo {
 const navMenuInfo: NavMenuInfo[] = [
     {
       title: "Tipos de maquinas de tatuar", 
-      subMenuList: [{title: "Máquina de bobina", link:"/maquina-de-bobina"}, {title: "Máquina rotativa", link: "#"}, {title: "Máquina de tatuar Pen", link: "#"}]   
+      subMenuList: [{title: "Máquina de bobina", link:"/maquina-de-bobina"}, {title: "Máquina rotativa", link: "/maquina-rotativa"}, {title: "Máquina de tatuar Pen", link: "/maquina-de-tatuar-pen"}]   
     }, 
     {
       title: "Marcas", 
-      subMenuList: [{title: "Sub Marca1", link:"https://www.google.cl/"}, {title: "Sub Marca2", link: "#"}, {title: "Sub Marca3", link: "#"}, {title: "Sub Marca4", link: "#"}] 
+      subMenuList: [{title: "Cheyenne", link:"https://www.google.cl/"}, {title: "Dragonhawk", link: "#"}, {title: "Hawink", link: "#"}, {title: "Stigma", link: "#"}, {title: "Atomus", link: "#"}, {title: "Solong Tattoo", link: "#"}] 
     } 
   ]
 
   // En este array se agregan los titulos de los NavMenuLink en la navBar //
 
-  const navMenuLinks= [ {title: "kit tatuaje principiante", url:"http://www.google.cl"},{title: "kit tatuaje pofesional", url:"http://www.google.cl"}]
+  const navMenuLinks= [ {title: "kit tatuaje principiante", url:"http://www.google.cl"},{title: "kit tatuaje pofesional", url:"http://www.google.cl"}, {title: "Nuestras Recomendaciones", url:"http://www.google.cl"}]
 ---
 
 <header>
-    <div class='flex py-1 px-3 bg-slate-300'>
+    <div class='flex flex-wrap shrink py-1 px-3 bg-slate-300'>
       <div class='flex item-center ml-5'>
        <a href="/"><img src="/images/Tatoo-machines-logo.png" alt="Logo" class='h-[80px]'/></a> 
       </div>
-      <div class='ml-5 flex-grow flex items-center z-20'>
+      <div class='ml-5 flex-grow flex items-center z-20 flex-wrap-reverse sm:flex-wrap'>
         { navMenuInfo.map(navMenu => (
             <DropdownMenu title={navMenu.title} subMenuList={navMenu.subMenuList} />
         ))}
