@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from "../components/Header.astro"
 import PageIndex from "../components/PageIndex.astro"
 import BackToIndexButton from '../components/BackToIndexButton.astro';
+import HeaderTailwind from '../components/HeaderTailwind.jsx';
 
 
 
@@ -14,9 +15,9 @@ const pageIndexProps = [
 ]
 ---
 
-<Layout title="Frontend Mentor | Intro section with dropdown navigation.">
-    <Header />
-	<main class="container mx-auto px-20">
+<Layout title="Frontend Mentor | Intro section with dropdown navigation.">  
+    <HeaderTailwind client:only="react" />
+	<main class="container mx-auto px-20 mt-8">
 	  <div class="grid grid-cols-1 lg:pt-5  max-w-[600px] mx-auto">
   		<div class="flex flex-col lg:flex lg:flex-row items-center relative z-0">
   		  <div>
