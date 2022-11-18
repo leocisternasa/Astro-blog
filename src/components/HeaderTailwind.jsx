@@ -27,7 +27,8 @@ const tiposDeMaquinas = [
     href: '/maquina-rotativa',
     icon: CursorArrowRaysIcon,
   },
-  { name: 'Máquina de tatuar Pen', href: '/maquina-de-tatuar-pen', icon: ShieldCheckIcon }
+  { name: 'Máquina de tatuar Pen', href: '/maquina-de-tatuar-pen', icon: ShieldCheckIcon },
+  { name: 'Freidora de aire pal Chinito', href: '/freidora-de-aire', icon: ShieldCheckIcon }
 ]
 
 const marcas = [

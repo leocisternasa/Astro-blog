@@ -3,6 +3,7 @@ export interface Props {
 	title: string;
 }
 const { title } = Astro.props;
+import HeaderTailwind from "../components/HeaderTailwind"
 ---
 
 <!DOCTYPE html>
@@ -21,6 +22,7 @@ const { title } = Astro.props;
 
 </head>
 <body class="text-medium-gray bg-almost-white z-0">
+  <HeaderTailwind client:only="react" />
 		<slot />
 </body>
 </html>
