@@ -65,7 +65,7 @@ export default function Example() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex items-center justify-between border-gray-100 py-4 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#">
+            <a href="/">
               <span className="sr-only">Your Company</span>
               <img
                 className="h-[90px] w-auto"
@@ -186,10 +186,10 @@ export default function Example() {
               )}
             </Popover>
 
-            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <a href="/kit-tatuaje-principiante" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Kit tatuaje principiante
             </a>
-            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <a href="/kit-tatuaje-profesional" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Kit tatuaje profesional
             </a>
             <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">

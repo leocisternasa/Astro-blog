@@ -9,28 +9,37 @@ import BackToIndexButton from '../components/BackToIndexButton.astro';
 
 const pageIndexProps = [
   {
-    seccionTitle: "Máquinas de bobina",
-    subSeccions: [{ title: "Funcionamiento máquina de tatuar de bobinar", link: "#funcionamiento-maquina-bobina"}, { title: "Precio maquina para tatuar de bobina", link: "#precio-maquina-bobinas"}, { title: "Venjajas y desventajas de las maquinas de tatuar de bobinas", link: "#ventajas-desventajas"}]
+    seccionTitle: "Funcionamiento máquinas rotativas",
+    seccionTitleLink: "#funcionamiento-maquina-rotativa"
+    
+  },
+  {
+    seccionTitle: "Tipos de máquinas rotativas",
+    subSeccions: [{ title: "Máquina de tatuar rotativa Direct-Drive o de accionamiento directo", link: "#maquina-rotativa-direct-drive"}, { title: "Máquina Rotativa con barra de armadura para tatuar (Armature Bar) o rotativa de martillo", link: "#maquina-rotativa-armature-bar"}, { title: "Máquina Rotativa de Acción Lineal", link: "#maquina-rotativa-accion-lineal"}, { title: "Maquina Rotativa Swashdrive", link: "#maquina-rotativa-swashdrive"}]
   }
 ]
 
 ---
 
 <Layout title="Frontend Mentor | Intro section with dropdown navigation.">
-    <Header />
 	<main class="container mx-auto px-20">
 	  <div class="grid grid-cols-1 lg:pt-5  max-w-[600px] mx-auto">
   		<div class="flex flex-col lg:flex lg:flex-row items-center relative z-0">
   		  <div>
 				  <h1 class="text-almost-black text-3xl lg:text-[4rem] lg:leading-[5rem] font-bold text-center mt-4">Maquinas rotativas</h1>
   				<p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Las máquinas para tatuar de bobinas es la máquina clásica de tatuaje, por eso los artistas más tradicionales siguen utilizando esta clase de máquinas de tatuar y son reacios al cambio evolutivo de la máquina de tatuar rotativa o máquinas para tatuar con cartuchos.
+            Las máquinas de tatuar rotativas se caracterizan por poseer un motor eléctrico encargado de producir el movimiento de la aguja y utilizar cartuchos de agujas. 
   				</p>
+          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
+            El motor eléctrico de la máquina de tatuar rotativa se mueve por medio de un cable de alimentación RCA, sin embargo, los modelos más nuevos funcionan por medio de sistema inalámbrico.
+          </p>
+          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
+            Gracias a que su montaje es bastante sencillo, este tipo de maquina es perfecto para aquellas personas que se están iniciando en el mundo de los tatuajes.
+          </p>
   		  </div>  		  
   		</div>
-      <div class=" flex justify-center mt-8 mb-6">
-        <img class="block object-scale-down rounded"  src="/images/maquina-tatuar-bobina-rosada.jpeg" alt="Hero">
-        <img class="block object-scale-down rounded"  src="/images/maquina-tatuar-bobinas-partes.jpeg" alt="Hero">
+      <div class=" flex justify-center mt-0 mb-2">
+        <img class="block object-scale-down rounded"  src="/images/maquinas-rotativas.jpg" alt="Hero">
       </div>
       <div class="flex mt-5">
       <PageIndex seccions={pageIndexProps} />
@@ -38,45 +47,73 @@ const pageIndexProps = [
       <div class="flex flex-col lg:flex lg:flex-row items-center relative z-0">
   		  <div>
           <br/>
-				  <h2  id="funcionamiento-maquina-bobina" class="text-4xl font-bol text-black mt-6">Funcionamiento máquina de tatuar de bobina</h2>
+				  <h2  id="funcionamiento-maquina-rotativa" class="text-4xl font-bol text-black mt-6">Funcionamiento máquina de tatuar rotativa</h2>
   				<p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Estas máquinas de tatuar son empleadas en su gran mayoría para delinear, hacer sombreados y/o rellenar. Las que son empleadas para delinear, usan grupos de agujas con frecuencia ubicadas en un patrón circular, para poder introducir la tinta en la piel de manera más efectiva. 
-  				</p>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Cuando las máquinas de tatuar de bobinas son empleadas para realizar sombreados, suelen hacer uso de componentes más pesados y una mayor cantidad de grupos de agujas más flexibles de lo habitual. También suelen tener unas bobinas más grandes que le otorgan de una mayor potencia. Ideal para tatuar áreas más extensas (tatuajes de mayor tamaño).
-  				</p>
-          <h2  id="precio-maquina-bobinas" class="text-4xl font-bol text-black mt-6">Precio maquina para tatuar de bobina</h2>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Dentro del mercado del tatuajes, a través de las numerosas distribuidoras de material de tatuaje, podemos encontrar máquinas para tatuar de bobinas de diferentes estilos, pesos, colores y precios.
-  				</p>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Una buena máquina para tatuar de bobinas es aquella que nos proporciona un peso compensado como hemos expuesto antes, es por ello que las máquinas de tatuar profesionales suelen estar fabricadas de hierro, acero, cobre y aleaciones pesadas, mientras que las máquinas de tatuar semiprofesionales están construidas en aluminio.
+            En las máquinas rotativas, un motor eléctrico mueve las agujas mediante movimientos de rotación (de ahí su nombre).         
           </p>
           <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-           El precio de estas máquinas puede variar desde 20 euros hasta 350 euros o más dependiendo de la marca y de los materiales necesarios. Muchos vendedores ofrecen kit de tatuaje principiante para los que se están introduciendo en este mundo. Estos kit de maquina de tatuar usualmente traen todos los accesorios necesarios para abarcar cualquier diseño básico.
+            Como respuesta a la corriente, el motor mueve una biela, que transmite el movimiento al martillo, y este hace que las agujas se muevan de arriba a abajo. De este modo, la aguja perfora la piel e inyecta la tinta.  				</p>
+          <h2  id="precio-maquina-bobinas" class="text-4xl font-bol text-black mt-6">Tipos de máquinas rotativas</h2>
+          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
+            La clasificación de las máquinas de tatuar rotativas que encontrarás divide sus tipos basándonos en el mecanismo que llevan en su interior. Cada tipo tiene unas ventajas que la hacen ideal, pero, en general, las máquinas de tatuar rotativas son las más cómodas, fáciles y silenciosas del mercado.</p>
+            <h3 id="maquina-rotativa-direct-drive" class="text-3xl font-bol text-black mt-6">Máquina de tatuar rotativa Direct-Drive o de accionamiento directo</h3>
+          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
+            Como su nombre indica, el motor eléctrico conecta directamente con un rodamiento descentralizado donde se conecta la aguja. No hay intermediarios y por tanto el golpeo es directo desde el motor. Su mantenimiento es mínimo y su movimiento es casi silencioso. En su defecto, las posibilidades de ajuste de golpeo son más limitadas.
           </p>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Las marcas de alta gama también suelen ofrecer kit de tatuajes profesionales para los que ya tienen experiencia y saben los accesorios que necesitarán. Siempre la recomendación es partir de a poco y comenzar con los productos para principiantes. Como en todo, existe una curva de aprendizaje la que si sabes seguir te llevará a triunfar con tus tattoos.
-           </p><br/>
-          <h3 id="ventajas-desventajas" class="text-4xl font-bol text-black">Venjajas y desventajas de las maquinas de tatuar de bobinas</h3>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Es muy difícil decir ventajas y desventajas de las maquinas de bobinas ya que muchas de ellas son subjetivas y dependerán del gusto del tatuador. Sin embargo mencionaremos algunas caracteristicas que hay que tener en cuenta al momento de decidirte ir por una de estas.
-          </p><br/>
           <div class=" flex justify-center">
-            <img class="block object-scale-down rounded h-[400px]"  src="/images/maquina-tatuar-bobinas.max-1000x1000.format-webp.webp" alt="Hero">
+            <img class="block object-scale-down rounded h-[400px]"  src="/images/maquina-de-tatuar-direct-drive.jpg" alt="Hero">
           </div>
-          <h3 id="maquinas-tatuar-rotativas" class="text-4xl font-bol text-black">Ventajas de las maquinas de bobinas:</h3>
-          <ul class="list-disc space-y-6 pt-5 lg:pt-[2rem] lg:text-xl">
-            <li>Aunque existen máquinas de bobina costosas, hay muchas máquinas de bobina asequibles y de alta calidad que se encuentran dentro de los presupuestos de la mayoría de los tatuadores. Mira algunas de ellas aquí.</li>
-            <li>Con el entrenamiento correcto, las máquinas de bobina se pueden ajustar para adaptarse a todos los estilos de tatuar.</li>
-            <li>Mantiene el «sonido» tradicional de un estudio de tatuajes.</li>
+
+          <ul class=" pt-5 lg:pt-[2rem] lg:text-xl flex flex-wrap space-y-4 list-disc">
+            <li><strong>Ventajas:</strong> Muy tranquila, un uso más eficiente del movimiento del motor, silenciosa. </li>
+            <li><strong>Desventajas:</strong> Puede ser difícil de estabilizar la aguja. Menos margen de ajuste para la profundidad.</li>
           </ul>
-          <h3 id="maquinas-tatuar-rotativas" class="text-4xl font-bol text-black mt-5">Desentajas de las maquinas de bobinas:</h3><br/>
-          <ul class="list-disc space-y-6 pt-5 lg:pt-[2rem] lg:text-xl">
-            <li>Una máquina de tatuar de bobina es de alto mantenimiento. Requieren ajustes y reemplazos regulares del resorte, así como el monitoreo constante de las condiciones de otros componentes; condensadores, tornillos de contacto, postes de unión, por nombrar algunos.</li>
-            <li>¡Ruidosa! Como mencionamos anteriormente, algunas personas adoran el zumbido tradicional de una máquina de bobina. Sin embargo, la mayoría hoy en día no puede hacer frente al sonido y lo encuentra irritante, así como a los artistas les resulta demasiado difícil hacer frente a la vibración de una bobina, especialmente en sesiones largas.</li>
-            <li>Los cartuchos de tatuar, los grips y los tubos, en la actualidad, generalmente están diseñados más para la creciente demanda de máquinas rotativas en lugar de máquinas de bobina.</li>
+          <h3 id="maquina-rotativa-armature-bar" class="text-3xl font-bol text-black mt-6">Máquina Rotativa con barra de armadura para tatuar (Armature Bar) o rotativa de martillo</h3>
+          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
+            El motor eléctrico mueve una biela, que unida a un martillo como en las máquinas para tatuaje de bobinas, ejerce el movimiento alternativo de arriba-abajo. Son algo más ruidosas que el estándar de máquina de tatuar rotativa, ya que su funcionamiento no se basa directamente en el motor eléctrico, pero es fácil de ajustar su golpeo debido a la posibilidad de modificar la altura de golpeo de la aguja.
+          </p>
+          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
+            Este tipo de máquina es precisa y fácil de ajustar.
+           </p><br/>
+
+           <div class=" flex justify-center">
+            <img class="block object-scale-down rounded h-[400px]"  src="/images/maquina-de-tatuar-armature-bar.jpg" alt="Hero">
+          </div>
+
+          <ul class=" pt-5 lg:pt-[2rem] lg:text-xl flex flex-wrap space-y-4 list-disc">
+            <li><strong>Ventajas:</strong>Fácil de ajustar, versátil </li>
+            <li><strong>Desventajas:</strong> Entre las máquinas de tatuar rotativas es la mas ruidosa sin embargo sigue siendo mas silenciosa que una maquina de tatuar de bobinas.</li>
           </ul>
+
+          <h3 id="maquina-rotativa-accion-lineal" class="text-3xl font-bol text-black mt-6">Máquina Rotativa de Acción Lineal</h3>
+          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
+            El motor eléctrico está conectado a una barra lineal deslizante que a través de un surco ejerce un movimiento de arriba-abajo impulsado la aguja hacia la piel.<br/><br/> La mayoría de estas máquinas para tatuar cuenta con un agarre plástico tipo clic para la aguja, evitando el uso de gomas auxiliares.<br/><br/> Además cuentan con una facilidad para cambiar la altura de golpeo y por tanto la finalidad de este tipo de máquinas para tatuar es ilimitada, pudiendo trabajar líneas, sombras y colores con facilidad. Por contra, son difíciles de mantener en caso de que tengamos que realizar algún tipo de reparación.          </p><br/>
+          <div class=" flex justify-center">
+            <img class="block object-scale-down rounded h-[400px]"  src="/images/maquina-de-tatuar-lineal.jpg" alt="Hero">
+          </div>
+
+          <ul class=" pt-5 lg:pt-[2rem] lg:text-xl flex flex-wrap space-y-4 list-disc">
+            <li><strong>Ventajas:</strong> Bastante tranquila y sin problemas si el mecanismo de canal y el control deslizante se montan bien juntos. Será tan estable como la de barra de armadura. <br/><br/>Si la máquina tiene un mecanismo de ajuste incorporado en el control deslizante, un alto grado de ajuste es posible. </li>
+            <li><strong>Desventajas:</strong> La fricción entre corredera y chasis pueden aumentar las posibilidades de que la máquina se caliente. Por lo general, son difíciles de desmontar y reparar.</li>
+          </ul><br/><br/>
+          <h3 id="maquina-rotativa-swashdrive" class="text-3xl font-bol text-black mt-6">Maquina Rotativa Swashdrive</h3>
+          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
+            Utiliza un plato oscilante para convertir la rotación del motor en un movimiento ascendente y descendente. Estas son muy divertidos de ver en movimiento. 
+          </p><br/>
+          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
+            Es silenciosa y suave, pero puede provocar problemas si se usa a voltajes muy altos.
+          </p><br/>
+
+          <div class=" flex justify-center">
+            <img class="block object-scale-down rounded h-[400px]"  src="/images/maquina-rotativa-swashdrive.jpg" alt="Hero">
+          </div>
+
+          <ul class=" pt-5 lg:pt-[2rem] lg:text-xl flex flex-wrap space-y-4 list-disc">
+            <li><strong>Ventajas:</strong> Muy silenciosa y suave. Las versiones híbridas permiten una amplia gama de ajustes. </li>
+            <li><strong>Desventajas:</strong> Necesita voltajes más altos para funcionar y puede causar inestabilidad si están mal montadas o si los mecanismos (placa / motor) no están bien lubricados.</li>
+          </ul><br/><br/>
+         
+          
   		  </div>
         <BackToIndexButton />
 		</div>

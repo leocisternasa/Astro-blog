@@ -10,8 +10,8 @@ console.log ("indexsss", seccions)
       <div class="bg-slate-200 rounded shadow-slate-50 z-10 group-hover:block mt-3">
         <div> { seccions.map((seccion, i) => (
             <ul class="list-disc" >
-                <a href="#tipos-maquinas-de-tatuar" class="text-black pt-2 pb-2 pl-4 pr-4 block hover:bg-slate-400"><strong>{i+1 }. </strong>{seccion.seccionTitle}</a>
-                {seccion.subSeccions.map(subSeccion => (
+                <a href={seccion.seccionTitleLink} class="text-black pt-2 pb-2 pl-4 pr-4 block hover:bg-slate-400"><strong>{i+1 }. </strong>{seccion.seccionTitle}</a>
+                {seccion.subSeccions && seccion.subSeccions.map(subSeccion => (
                    <li class="ml-12"> <a href={subSeccion.link} class="text-black pt-2 pb-2 pl-4 pr-4 block hover:bg-slate-400">{subSeccion.title}</a></li>
                 ))}
             </ul>  

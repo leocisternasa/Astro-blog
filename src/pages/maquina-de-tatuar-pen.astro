@@ -9,28 +9,28 @@ import BackToIndexButton from '../components/BackToIndexButton.astro';
 
 const pageIndexProps = [
   {
-    seccionTitle: "Máquinas de bobina",
-    subSeccions: [{ title: "Funcionamiento máquina de tatuar de bobinar", link: "#funcionamiento-maquina-bobina"}, { title: "Precio maquina para tatuar de bobina", link: "#precio-maquina-bobinas"}, { title: "Venjajas y desventajas de las maquinas de tatuar de bobinas", link: "#ventajas-desventajas"}]
+    seccionTitle: "Máquinas de tatuar Pen",
+    seccionTitleLink:"#maquina-tatuar-pen",
+    subSeccions: [{ title: "Maquinas de tatuar Pen. Cartuchos", link: "#cartuchos-maquina-tatuar-pen"}, { title: "Razones para utilizar una maquina de tatuar pen", link: "#razones-maquina-pen"}]
   }
 ]
 
 ---
 
 <Layout title="Frontend Mentor | Intro section with dropdown navigation.">
-    <Header />
 	<main class="container mx-auto px-20">
 	  <div class="grid grid-cols-1 lg:pt-5  max-w-[600px] mx-auto">
   		<div class="flex flex-col lg:flex lg:flex-row items-center relative z-0">
   		  <div>
-				  <h1 class="text-almost-black text-3xl lg:text-[4rem] lg:leading-[5rem] font-bold text-center mt-4">Maquinas de tatuar pen</h1>
+				  <h1 id="maquina-tatuar-pen" class="text-almost-black text-3xl lg:text-[4rem] lg:leading-[5rem] font-bold text-center mt-4">Maquinas de tatuar pen</h1>
   				<p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Las máquinas para tatuar de bobinas es la máquina clásica de tatuaje, por eso los artistas más tradicionales siguen utilizando esta clase de máquinas de tatuar y son reacios al cambio evolutivo de la máquina de tatuar rotativa o máquinas para tatuar con cartuchos.
+            Como su nombre en inglés lo indica, son máquinas de estilo lápiz y hay muchos tatuadores que están optando por estos modelos. La razón es que son mucho más cómodas para trazar y es como estar dibujando con bolígrafo sobre la piel.
   				</p>
   		  </div>  		  
   		</div>
       <div class=" flex justify-center mt-8 mb-6">
-        <img class="block object-scale-down rounded"  src="/images/maquina-tatuar-bobina-rosada.jpeg" alt="Hero">
-        <img class="block object-scale-down rounded"  src="/images/maquina-tatuar-bobinas-partes.jpeg" alt="Hero">
+        <img class="block object-scale-down rounded"  src="/images/maquina-tatuar-pen-hero.jpg" alt="Hero">
+        <img class="block object-scale-down rounded"  src="/images/maquina-tatuar-pen-tatoo.jpeg" alt="Hero">
       </div>
       <div class="flex mt-5">
       <PageIndex seccions={pageIndexProps} />
@@ -38,45 +38,38 @@ const pageIndexProps = [
       <div class="flex flex-col lg:flex lg:flex-row items-center relative z-0">
   		  <div>
           <br/>
-				  <h2  id="funcionamiento-maquina-bobina" class="text-4xl font-bol text-black mt-6">Funcionamiento máquina de tatuar de bobina</h2>
+				  <h2  id="cartuchos-maquina-tatuar-pen" class="text-4xl font-bol text-black mt-6">Maquinas de tatuar Pen. Cartuchos</h2>
   				<p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Estas máquinas de tatuar son empleadas en su gran mayoría para delinear, hacer sombreados y/o rellenar. Las que son empleadas para delinear, usan grupos de agujas con frecuencia ubicadas en un patrón circular, para poder introducir la tinta en la piel de manera más efectiva. 
+            La última evolución en máquinas para tatuajes rotativas, son las que utilizan un mecanismo de cartuchos de agujas. Los cartuchos sustituyen a las agujas convencionales, pudiendo cambiar de tamaño de aguja con un simple giro del cartucho. El uso de esta clase de cartuchos está especialmente diseñado para las máquinas de tatuar tipo Pen, que veremos a continuación, pero también está extendido dentro del mundo de las máquinas para tatuar rotativas.  				</p>
+            <div class=" flex justify-center mt-8 mb-6">
+              <img class="block object-scale-down rounded"  src="/images/cartuchos.jpg" alt="Hero">
+            </div>
+            <div class=" flex justify-center mt-8 mb-6">
+              <img class="block object-scale-down rounded"  src="/images/kit-pen-tatuar.jpg" alt="Hero">
+            </div>
+          
+          
+            <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
+              La diferencia de esas máquinas rotativas de tatuaje para cartuchos con las máquinas de tatuaje rotativas clásicas es que, las utilizadas con cartuchos, cuentan con una varilla que acciona el cartucho conectada directamente a la biela del motor eléctrico. Al evitar la utilización de agujas para tatuar convencionales, evitamos el rozamiento de éstas con el grip y conseguimos un movimiento aún más silencioso.
+            </p>
+            <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
+            Estas máquinas son muy utilizadas para tatuadores del estilo freehand por sus posibilidades ergonómicas y diseños amoldables. Además, son muy ligeras, lo que permite tener más libertad a la hora de trazar y aguantar más las sesiones muy extensas.  				</p>
+          <h2  id="razones-maquina-pen" class="text-4xl font-bol text-black mt-6">Razones para utilizar una maquina de tatuar pen</h2>
+          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
+           Recordemos que esto es siempre preferencia del tatuador, no hay máquinas mejores o peores, simplemente diseños que se ajustan más a otros dependiendo de lo que se quiera hacer.
+
   				</p>
           <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Cuando las máquinas de tatuar de bobinas son empleadas para realizar sombreados, suelen hacer uso de componentes más pesados y una mayor cantidad de grupos de agujas más flexibles de lo habitual. También suelen tener unas bobinas más grandes que le otorgan de una mayor potencia. Ideal para tatuar áreas más extensas (tatuajes de mayor tamaño).
-  				</p>
-          <h2  id="precio-maquina-bobinas" class="text-4xl font-bol text-black mt-6">Precio maquina para tatuar de bobina</h2>
+            Lo innovador de estas máquinas es que se puede ajustar el voltaje y la potencia según las necesidades.
+
+            Pero además, y este es el dato más importante, pueden usarse de forma inalámbrica, permitiendo al tatuador tener más libertad a la hora de trabajar y moverse por el espacio sin tener que molestar al cliente.          </p>
           <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Dentro del mercado del tatuajes, a través de las numerosas distribuidoras de material de tatuaje, podemos encontrar máquinas para tatuar de bobinas de diferentes estilos, pesos, colores y precios.
-  				</p>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Una buena máquina para tatuar de bobinas es aquella que nos proporciona un peso compensado como hemos expuesto antes, es por ello que las máquinas de tatuar profesionales suelen estar fabricadas de hierro, acero, cobre y aleaciones pesadas, mientras que las máquinas de tatuar semiprofesionales están construidas en aluminio.
-          </p>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-           El precio de estas máquinas puede variar desde 20 euros hasta 350 euros o más dependiendo de la marca y de los materiales necesarios. Muchos vendedores ofrecen kit de tatuaje principiante para los que se están introduciendo en este mundo. Estos kit de maquina de tatuar usualmente traen todos los accesorios necesarios para abarcar cualquier diseño básico.
-          </p>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Las marcas de alta gama también suelen ofrecer kit de tatuajes profesionales para los que ya tienen experiencia y saben los accesorios que necesitarán. Siempre la recomendación es partir de a poco y comenzar con los productos para principiantes. Como en todo, existe una curva de aprendizaje la que si sabes seguir te llevará a triunfar con tus tattoos.
-           </p><br/>
-          <h3 id="ventajas-desventajas" class="text-4xl font-bol text-black">Venjajas y desventajas de las maquinas de tatuar de bobinas</h3>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Es muy difícil decir ventajas y desventajas de las maquinas de bobinas ya que muchas de ellas son subjetivas y dependerán del gusto del tatuador. Sin embargo mencionaremos algunas caracteristicas que hay que tener en cuenta al momento de decidirte ir por una de estas.
-          </p><br/>
-          <div class=" flex justify-center">
-            <img class="block object-scale-down rounded h-[400px]"  src="/images/maquina-tatuar-bobinas.max-1000x1000.format-webp.webp" alt="Hero">
-          </div>
-          <h3 id="maquinas-tatuar-rotativas" class="text-4xl font-bol text-black">Ventajas de las maquinas de bobinas:</h3>
-          <ul class="list-disc space-y-6 pt-5 lg:pt-[2rem] lg:text-xl">
-            <li>Aunque existen máquinas de bobina costosas, hay muchas máquinas de bobina asequibles y de alta calidad que se encuentran dentro de los presupuestos de la mayoría de los tatuadores. Mira algunas de ellas aquí.</li>
-            <li>Con el entrenamiento correcto, las máquinas de bobina se pueden ajustar para adaptarse a todos los estilos de tatuar.</li>
-            <li>Mantiene el «sonido» tradicional de un estudio de tatuajes.</li>
-          </ul>
-          <h3 id="maquinas-tatuar-rotativas" class="text-4xl font-bol text-black mt-5">Desentajas de las maquinas de bobinas:</h3><br/>
-          <ul class="list-disc space-y-6 pt-5 lg:pt-[2rem] lg:text-xl">
-            <li>Una máquina de tatuar de bobina es de alto mantenimiento. Requieren ajustes y reemplazos regulares del resorte, así como el monitoreo constante de las condiciones de otros componentes; condensadores, tornillos de contacto, postes de unión, por nombrar algunos.</li>
-            <li>¡Ruidosa! Como mencionamos anteriormente, algunas personas adoran el zumbido tradicional de una máquina de bobina. Sin embargo, la mayoría hoy en día no puede hacer frente al sonido y lo encuentra irritante, así como a los artistas les resulta demasiado difícil hacer frente a la vibración de una bobina, especialmente en sesiones largas.</li>
-            <li>Los cartuchos de tatuar, los grips y los tubos, en la actualidad, generalmente están diseñados más para la creciente demanda de máquinas rotativas en lugar de máquinas de bobina.</li>
-          </ul>
+            En el mercado podemos encontrar multitud de marcas comercializando sus máquinas para tatuar tipo pen pero, si tuviéramos que destacar una, sería las máquinas de Cheyenne, quienes revolucionaron el mercado del tatuaje e introdujeron una gran gama de máquinas para tatuar tipo pen.          </p>
+         
+          
+          
+          
+          
   		  </div>
         <BackToIndexButton />
 		</div>
