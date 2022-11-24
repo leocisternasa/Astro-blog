@@ -4,6 +4,7 @@ export interface Props {
 }
 const { title } = Astro.props;
 import HeaderTailwind from "../components/HeaderTailwind"
+import Footer from "../components/Footer.astro"
 ---
 
 <!DOCTYPE html>
@@ -24,5 +25,6 @@ import HeaderTailwind from "../components/HeaderTailwind"
 <body class="text-medium-gray bg-almost-white z-0">
   <HeaderTailwind client:only="react" />
 		<slot />
+  <Footer />
 </body>
 </html>
