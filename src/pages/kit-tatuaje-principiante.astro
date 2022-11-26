@@ -1,51 +1,75 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from "../components/Header.astro"
-import PageIndex from "../components/PageIndex.astro"
-import BackToIndexButton from '../components/BackToIndexButton.astro';
-
-
-
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import PageIndex from "../components/PageIndex.astro";
+import BackToIndexButton from "../components/BackToIndexButton.astro";
 
 const pageIndexProps = [
   {
     seccionTitle: "Máquinas de bobina",
     seccionTitleLink: "#maquina-de-bobina",
-    subSeccions: [{ title: "Funcionamiento máquina de tatuar de bobinar", link: "#funcionamiento-maquina-bobina"}, { title: "Precio maquina para tatuar de bobina", link: "#precio-maquina-bobinas"}, { title: "Venjajas y desventajas de las maquinas de tatuar de bobinas", link: "#ventajas-desventajas"}]
-  }
-]
-
+    subSeccions: [
+      {
+        title: "Funcionamiento máquina de tatuar de bobinar",
+        link: "#funcionamiento-maquina-bobina",
+      },
+      {
+        title: "Precio maquina para tatuar de bobina",
+        link: "#precio-maquina-bobinas",
+      },
+      {
+        title: "Venjajas y desventajas de las maquinas de tatuar de bobinas",
+        link: "#ventajas-desventajas",
+      },
+    ],
+  },
+];
 ---
 
 <Layout title="Frontend Mentor | Intro section with dropdown navigation.">
-	<main class="container mx-auto px-20">
-	  <div class="grid grid-cols-1 lg:pt-5  max-w-[600px] mx-auto">
-  		<div class="flex flex-col lg:flex lg:flex-row items-center relative z-0">
-  		  <div>
-			<h1 id="maquina-de-bobina"class="text-almost-black text-3xl lg:text-[4rem] lg:leading-[5rem] font-bold text-center mt-4">Kit tatuaje principiantes</h1>
-  			<p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-               Tal como existen varios tipos de máquinas de tatuar; existen un sin número de marcas de distintas gamas, precios, materiales, usos, etc. A lo anterior hay que sumarle el hecho de que la elección sobre qué máquina de tatuar usar es subjetiva y depende en gran medida del gusto personal del tatuador. 
-  				</p>
-            <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-                Tal cantidad de variables puede abrumar a los tatuadores, sobre todo a los que comienzan en este campo, a la hora de comprar su primera máquina o de tener que renovar la que ya tenían.
-            </p>
-            <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-               En respuesta, los fabricantes han creado kits "ready to use" para poder comenzar a tatuar desde el  momento abres el kit.
-            </p>
-            <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-                Existen kits de distintas gamas y precios y son muy convenientes para poder probar distintos tipos de maquinas y accesorios antes de dar con la que escogerás para tu práctica habitual.
-             </p>
-             <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-                Los kits para principiantes suelen incorporar trozos de piel sintéticos, hechos de silicona, para poder practicar distintos diseños en un lienzo plano y puedas acostumbrarte a tu nueva máquina. 
-             </p>
-             <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-                También existen partes del cuerpo sintéticas para practicar de forma mas realista. Este tipo de modelos para práctica son altamente recomendados ya que simulan de buena forma un ambiente real. 
-             </p>
-          </div>	  
-  		</div>
-      
-      
-      
-  </div>
-	</main>
+  <main class="container mx-auto px-20">
+    <div class="grid grid-cols-1 lg:pt-5 max-w-[600px] mx-auto">
+      <div class="flex flex-col lg:flex lg:flex-row items-center relative z-0">
+        <div>
+          <h1
+            id="maquina-de-bobina"
+            class="text-almost-black text-3xl lg:text-[4rem] lg:leading-[5rem] font-bold text-center mt-4">
+            Kit tatuaje principiantes
+          </h1>
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            Tal como existen varios tipos de máquinas de tatuar; existen un sin
+            número de marcas de distintas gamas, precios, materiales, usos, etc.
+            A lo anterior hay que sumarle el hecho de que la elección sobre qué
+            máquina de tatuar usar es subjetiva y depende en gran medida del
+            gusto personal del tatuador.
+          </p>
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            Tal cantidad de variables puede abrumar a los tatuadores, sobre todo
+            a los que comienzan en este campo, a la hora de comprar su primera
+            máquina o de tener que renovar la que ya tenían.
+          </p>
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            En respuesta, los fabricantes han creado kits "ready to use" para
+            poder comenzar a tatuar desde el momento abres el kit.
+          </p>
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            Existen kits de distintas gamas y precios y son muy convenientes
+            para poder probar distintos tipos de maquinas y accesorios antes de
+            dar con la que escogerás para tu práctica habitual.
+          </p>
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            Los kits para principiantes suelen incorporar trozos de piel
+            sintéticos, hechos de silicona, para poder practicar distintos
+            diseños en un lienzo plano y puedas acostumbrarte a tu nueva
+            máquina.
+          </p>
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            También existen partes del cuerpo sintéticas para practicar de forma
+            mas realista. Este tipo de modelos para práctica son altamente
+            recomendados ya que simulan de buena forma un ambiente real.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
 </Layout>

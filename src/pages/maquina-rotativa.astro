@@ -1,122 +1,251 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from "../components/Header.astro"
-import PageIndex from "../components/PageIndex.astro"
-import BackToIndexButton from '../components/BackToIndexButton.astro';
-
-
-
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import PageIndex from "../components/PageIndex.astro";
+import BackToIndexButton from "../components/BackToIndexButton.astro";
 
 const pageIndexProps = [
   {
     seccionTitle: "Funcionamiento máquinas rotativas",
-    seccionTitleLink: "#funcionamiento-maquina-rotativa"
-    
+    seccionTitleLink: "#funcionamiento-maquina-rotativa",
   },
   {
     seccionTitle: "Tipos de máquinas rotativas",
-    subSeccions: [{ title: "Máquina de tatuar rotativa Direct-Drive o de accionamiento directo", link: "#maquina-rotativa-direct-drive"}, { title: "Máquina Rotativa con barra de armadura para tatuar (Armature Bar) o rotativa de martillo", link: "#maquina-rotativa-armature-bar"}, { title: "Máquina Rotativa de Acción Lineal", link: "#maquina-rotativa-accion-lineal"}, { title: "Maquina Rotativa Swashdrive", link: "#maquina-rotativa-swashdrive"}]
-  }
-]
-
+    subSeccions: [
+      {
+        title:
+          "Máquina de tatuar rotativa Direct-Drive o de accionamiento directo",
+        link: "#maquina-rotativa-direct-drive",
+      },
+      {
+        title:
+          "Máquina Rotativa con barra de armadura para tatuar (Armature Bar) o rotativa de martillo",
+        link: "#maquina-rotativa-armature-bar",
+      },
+      {
+        title: "Máquina Rotativa de Acción Lineal",
+        link: "#maquina-rotativa-accion-lineal",
+      },
+      {
+        title: "Maquina Rotativa Swashdrive",
+        link: "#maquina-rotativa-swashdrive",
+      },
+    ],
+  },
+];
 ---
 
 <Layout title="Frontend Mentor | Intro section with dropdown navigation.">
-	<main class="container mx-auto px-20">
-	  <div class="grid grid-cols-1 lg:pt-5  max-w-[600px] mx-auto">
-  		<div class="flex flex-col lg:flex lg:flex-row items-center relative z-0">
-  		  <div>
-				  <h1 class="text-almost-black text-3xl lg:text-[4rem] lg:leading-[5rem] font-bold text-center mt-4">Maquinas rotativas</h1>
-  				<p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Las máquinas de tatuar rotativas se caracterizan por poseer un motor eléctrico encargado de producir el movimiento de la aguja y utilizar cartuchos de agujas. 
-  				</p>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            El motor eléctrico de la máquina de tatuar rotativa se mueve por medio de un cable de alimentación RCA, sin embargo, los modelos más nuevos funcionan por medio de sistema inalámbrico.
+  <main class="container mx-auto px-20">
+    <div class="grid grid-cols-1 lg:pt-5 max-w-[600px] mx-auto">
+      <div class="flex flex-col lg:flex lg:flex-row items-center relative z-0">
+        <div>
+          <h1
+            class="text-almost-black text-3xl lg:text-[4rem] lg:leading-[5rem] font-bold text-center mt-4">
+            Maquinas rotativas
+          </h1>
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            Las máquinas de tatuar rotativas se caracterizan por poseer un motor
+            eléctrico encargado de producir el movimiento de la aguja y utilizar
+            cartuchos de agujas.
           </p>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Gracias a que su montaje es bastante sencillo, este tipo de maquina es perfecto para aquellas personas que se están iniciando en el mundo de los tatuajes.
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            El motor eléctrico de la máquina de tatuar rotativa se mueve por
+            medio de un cable de alimentación RCA, sin embargo, los modelos más
+            nuevos funcionan por medio de sistema inalámbrico.
           </p>
-  		  </div>  		  
-  		</div>
-      <div class=" flex justify-center mt-0 mb-2">
-        <img class="block object-scale-down rounded"  src="/images/maquinas-rotativas.jpg" alt="Hero">
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            Gracias a que su montaje es bastante sencillo, este tipo de maquina
+            es perfecto para aquellas personas que se están iniciando en el
+            mundo de los tatuajes.
+          </p>
+        </div>
+      </div>
+      <div class="flex justify-center mt-0 mb-2">
+        <img
+          class="block object-scale-down rounded"
+          src="/images/maquinas-rotativas.jpg"
+          alt="Hero"
+        />
       </div>
       <div class="flex mt-5">
-      <PageIndex seccions={pageIndexProps} />
+        <PageIndex seccions={pageIndexProps} />
       </div>
       <div class="flex flex-col lg:flex lg:flex-row items-center relative z-0">
-  		  <div>
-          <br/>
-				  <h2  id="funcionamiento-maquina-rotativa" class="text-4xl font-bol text-black mt-6">Funcionamiento máquina de tatuar rotativa</h2>
-  				<p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            En las máquinas rotativas, un motor eléctrico mueve las agujas mediante movimientos de rotación (de ahí su nombre).         
+        <div>
+          <br />
+          <h2
+            id="funcionamiento-maquina-rotativa"
+            class="text-4xl font-bol text-black mt-6">
+            Funcionamiento máquina de tatuar rotativa
+          </h2>
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            En las máquinas rotativas, un motor eléctrico mueve las agujas
+            mediante movimientos de rotación (de ahí su nombre).
           </p>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Como respuesta a la corriente, el motor mueve una biela, que transmite el movimiento al martillo, y este hace que las agujas se muevan de arriba a abajo. De este modo, la aguja perfora la piel e inyecta la tinta.  				</p>
-          <h2  id="precio-maquina-bobinas" class="text-4xl font-bol text-black mt-6">Tipos de máquinas rotativas</h2>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            La clasificación de las máquinas de tatuar rotativas que encontrarás divide sus tipos basándonos en el mecanismo que llevan en su interior. Cada tipo tiene unas ventajas que la hacen ideal, pero, en general, las máquinas de tatuar rotativas son las más cómodas, fáciles y silenciosas del mercado.</p>
-            <h3 id="maquina-rotativa-direct-drive" class="text-3xl font-bol text-black mt-6">Máquina de tatuar rotativa Direct-Drive o de accionamiento directo</h3>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Como su nombre indica, el motor eléctrico conecta directamente con un rodamiento descentralizado donde se conecta la aguja. No hay intermediarios y por tanto el golpeo es directo desde el motor. Su mantenimiento es mínimo y su movimiento es casi silencioso. En su defecto, las posibilidades de ajuste de golpeo son más limitadas.
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            Como respuesta a la corriente, el motor mueve una biela, que
+            transmite el movimiento al martillo, y este hace que las agujas se
+            muevan de arriba a abajo. De este modo, la aguja perfora la piel e
+            inyecta la tinta.
           </p>
-          <div class=" flex justify-center">
-            <img class="block object-scale-down rounded h-[400px]"  src="/images/maquina-de-tatuar-direct-drive.jpg" alt="Hero">
+          <h2
+            id="precio-maquina-bobinas"
+            class="text-4xl font-bol text-black mt-6">
+            Tipos de máquinas rotativas
+          </h2>
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            La clasificación de las máquinas de tatuar rotativas que encontrarás
+            divide sus tipos basándonos en el mecanismo que llevan en su
+            interior. Cada tipo tiene unas ventajas que la hacen ideal, pero, en
+            general, las máquinas de tatuar rotativas son las más cómodas,
+            fáciles y silenciosas del mercado.
+          </p>
+          <h3
+            id="maquina-rotativa-direct-drive"
+            class="text-3xl font-bol text-black mt-6">
+            Máquina de tatuar rotativa Direct-Drive o de accionamiento directo
+          </h3>
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            Como su nombre indica, el motor eléctrico conecta directamente con
+            un rodamiento descentralizado donde se conecta la aguja. No hay
+            intermediarios y por tanto el golpeo es directo desde el motor. Su
+            mantenimiento es mínimo y su movimiento es casi silencioso. En su
+            defecto, las posibilidades de ajuste de golpeo son más limitadas.
+          </p>
+          <div class="flex justify-center">
+            <img
+              class="block object-scale-down rounded h-[400px]"
+              src="/images/maquina-de-tatuar-direct-drive.jpg"
+              alt="Hero"
+            />
           </div>
 
-          <ul class=" pt-5 lg:pt-[2rem] lg:text-xl flex flex-wrap space-y-4 list-disc">
-            <li><strong>Ventajas:</strong> Muy tranquila, un uso más eficiente del movimiento del motor, silenciosa. </li>
-            <li><strong>Desventajas:</strong> Puede ser difícil de estabilizar la aguja. Menos margen de ajuste para la profundidad.</li>
+          <ul
+            class="pt-5 lg:pt-[2rem] lg:text-xl flex flex-wrap space-y-4 list-disc">
+            <li>
+              <strong>Ventajas:</strong> Muy tranquila, un uso más eficiente del
+              movimiento del motor, silenciosa.
+            </li>
+            <li>
+              <strong>Desventajas:</strong> Puede ser difícil de estabilizar la aguja.
+              Menos margen de ajuste para la profundidad.
+            </li>
           </ul>
-          <h3 id="maquina-rotativa-armature-bar" class="text-3xl font-bol text-black mt-6">Máquina Rotativa con barra de armadura para tatuar (Armature Bar) o rotativa de martillo</h3>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            El motor eléctrico mueve una biela, que unida a un martillo como en las máquinas para tatuaje de bobinas, ejerce el movimiento alternativo de arriba-abajo. Son algo más ruidosas que el estándar de máquina de tatuar rotativa, ya que su funcionamiento no se basa directamente en el motor eléctrico, pero es fácil de ajustar su golpeo debido a la posibilidad de modificar la altura de golpeo de la aguja.
+          <h3
+            id="maquina-rotativa-armature-bar"
+            class="text-3xl font-bol text-black mt-6">
+            Máquina Rotativa con barra de armadura para tatuar (Armature Bar) o
+            rotativa de martillo
+          </h3>
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            El motor eléctrico mueve una biela, que unida a un martillo como en
+            las máquinas para tatuaje de bobinas, ejerce el movimiento
+            alternativo de arriba-abajo. Son algo más ruidosas que el estándar
+            de máquina de tatuar rotativa, ya que su funcionamiento no se basa
+            directamente en el motor eléctrico, pero es fácil de ajustar su
+            golpeo debido a la posibilidad de modificar la altura de golpeo de
+            la aguja.
           </p>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
             Este tipo de máquina es precisa y fácil de ajustar.
-           </p><br/>
+          </p><br />
 
-           <div class=" flex justify-center">
-            <img class="block object-scale-down rounded h-[400px]"  src="/images/maquina-de-tatuar-armature-bar.jpg" alt="Hero">
+          <div class="flex justify-center">
+            <img
+              class="block object-scale-down rounded h-[400px]"
+              src="/images/maquina-de-tatuar-armature-bar.jpg"
+              alt="Hero"
+            />
           </div>
 
-          <ul class=" pt-5 lg:pt-[2rem] lg:text-xl flex flex-wrap space-y-4 list-disc">
-            <li><strong>Ventajas:</strong>Fácil de ajustar, versátil </li>
-            <li><strong>Desventajas:</strong> Entre las máquinas de tatuar rotativas es la mas ruidosa sin embargo sigue siendo mas silenciosa que una maquina de tatuar de bobinas.</li>
+          <ul
+            class="pt-5 lg:pt-[2rem] lg:text-xl flex flex-wrap space-y-4 list-disc">
+            <li><strong>Ventajas:</strong>Fácil de ajustar, versátil</li>
+            <li>
+              <strong>Desventajas:</strong> Entre las máquinas de tatuar rotativas
+              es la mas ruidosa sin embargo sigue siendo mas silenciosa que una maquina
+              de tatuar de bobinas.
+            </li>
           </ul>
 
-          <h3 id="maquina-rotativa-accion-lineal" class="text-3xl font-bol text-black mt-6">Máquina Rotativa de Acción Lineal</h3>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            El motor eléctrico está conectado a una barra lineal deslizante que a través de un surco ejerce un movimiento de arriba-abajo impulsado la aguja hacia la piel.<br/><br/> La mayoría de estas máquinas para tatuar cuenta con un agarre plástico tipo clic para la aguja, evitando el uso de gomas auxiliares.<br/><br/> Además cuentan con una facilidad para cambiar la altura de golpeo y por tanto la finalidad de este tipo de máquinas para tatuar es ilimitada, pudiendo trabajar líneas, sombras y colores con facilidad. Por contra, son difíciles de mantener en caso de que tengamos que realizar algún tipo de reparación.          </p><br/>
-          <div class=" flex justify-center">
-            <img class="block object-scale-down rounded h-[400px]"  src="/images/maquina-de-tatuar-lineal.jpg" alt="Hero">
+          <h3
+            id="maquina-rotativa-accion-lineal"
+            class="text-3xl font-bol text-black mt-6">
+            Máquina Rotativa de Acción Lineal
+          </h3>
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            El motor eléctrico está conectado a una barra lineal deslizante que
+            a través de un surco ejerce un movimiento de arriba-abajo impulsado
+            la aguja hacia la piel.<br /><br /> La mayoría de estas máquinas para
+            tatuar cuenta con un agarre plástico tipo clic para la aguja, evitando
+            el uso de gomas auxiliares.<br /><br /> Además cuentan con una facilidad
+            para cambiar la altura de golpeo y por tanto la finalidad de este tipo
+            de máquinas para tatuar es ilimitada, pudiendo trabajar líneas, sombras
+            y colores con facilidad. Por contra, son difíciles de mantener en caso
+            de que tengamos que realizar algún tipo de reparación.
+          </p><br />
+          <div class="flex justify-center">
+            <img
+              class="block object-scale-down rounded h-[400px]"
+              src="/images/maquina-de-tatuar-lineal.jpg"
+              alt="Hero"
+            />
           </div>
 
-          <ul class=" pt-5 lg:pt-[2rem] lg:text-xl flex flex-wrap space-y-4 list-disc">
-            <li><strong>Ventajas:</strong> Bastante tranquila y sin problemas si el mecanismo de canal y el control deslizante se montan bien juntos. Será tan estable como la de barra de armadura. <br/><br/>Si la máquina tiene un mecanismo de ajuste incorporado en el control deslizante, un alto grado de ajuste es posible. </li>
-            <li><strong>Desventajas:</strong> La fricción entre corredera y chasis pueden aumentar las posibilidades de que la máquina se caliente. Por lo general, son difíciles de desmontar y reparar.</li>
-          </ul><br/><br/>
-          <h3 id="maquina-rotativa-swashdrive" class="text-3xl font-bol text-black mt-6">Maquina Rotativa Swashdrive</h3>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Utiliza un plato oscilante para convertir la rotación del motor en un movimiento ascendente y descendente. Estas son muy divertidos de ver en movimiento. 
-          </p><br/>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Es silenciosa y suave, pero puede provocar problemas si se usa a voltajes muy altos.
-          </p><br/>
+          <ul
+            class="pt-5 lg:pt-[2rem] lg:text-xl flex flex-wrap space-y-4 list-disc">
+            <li>
+              <strong>Ventajas:</strong> Bastante tranquila y sin problemas si el
+              mecanismo de canal y el control deslizante se montan bien juntos. Será
+              tan estable como la de barra de armadura. <br /><br />Si la
+              máquina tiene un mecanismo de ajuste incorporado en el control
+              deslizante, un alto grado de ajuste es posible.
+            </li>
+            <li>
+              <strong>Desventajas:</strong> La fricción entre corredera y chasis
+              pueden aumentar las posibilidades de que la máquina se caliente. Por
+              lo general, son difíciles de desmontar y reparar.
+            </li>
+          </ul><br /><br />
+          <h3
+            id="maquina-rotativa-swashdrive"
+            class="text-3xl font-bol text-black mt-6">
+            Maquina Rotativa Swashdrive
+          </h3>
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            Utiliza un plato oscilante para convertir la rotación del motor en
+            un movimiento ascendente y descendente. Estas son muy divertidos de
+            ver en movimiento.
+          </p><br />
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            Es silenciosa y suave, pero puede provocar problemas si se usa a
+            voltajes muy altos.
+          </p><br />
 
-          <div class=" flex justify-center">
-            <img class="block object-scale-down rounded h-[400px]"  src="/images/maquina-rotativa-swashdrive.jpg" alt="Hero">
+          <div class="flex justify-center">
+            <img
+              class="block object-scale-down rounded h-[400px]"
+              src="/images/maquina-rotativa-swashdrive.jpg"
+              alt="Hero"
+            />
           </div>
 
-          <ul class=" pt-5 lg:pt-[2rem] lg:text-xl flex flex-wrap space-y-4 list-disc">
-            <li><strong>Ventajas:</strong> Muy silenciosa y suave. Las versiones híbridas permiten una amplia gama de ajustes. </li>
-            <li><strong>Desventajas:</strong> Necesita voltajes más altos para funcionar y puede causar inestabilidad si están mal montadas o si los mecanismos (placa / motor) no están bien lubricados.</li>
-          </ul><br/><br/>
-         
-          
-  		  </div>
+          <ul
+            class="pt-5 lg:pt-[2rem] lg:text-xl flex flex-wrap space-y-4 list-disc">
+            <li>
+              <strong>Ventajas:</strong> Muy silenciosa y suave. Las versiones híbridas
+              permiten una amplia gama de ajustes.
+            </li>
+            <li>
+              <strong>Desventajas:</strong> Necesita voltajes más altos para funcionar
+              y puede causar inestabilidad si están mal montadas o si los mecanismos
+              (placa / motor) no están bien lubricados.
+            </li>
+          </ul><br /><br />
+        </div>
         <BackToIndexButton />
-		</div>
-  </div>
-	</main>
+      </div>
+    </div>
+  </main>
 </Layout>

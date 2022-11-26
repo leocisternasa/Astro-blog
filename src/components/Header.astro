@@ -1,46 +1,73 @@
 ---
 import DropdownMenu from "./DropdownMenu.astro";
-import NavMenuLink from "../components/NavMenuLink.astro"
+import NavMenuLink from "../components/NavMenuLink.astro";
 
 export interface NavMenuInfo {
-  title: string,
+  title: string;
   subMenuList: Array<{
-    title: string,
-    link: string
-  }>
+    title: string;
+    link: string;
+  }>;
 }
-
 
 // En este array se agregan los titulos de los Drop down menus en la navBar //
 const navMenuInfo: NavMenuInfo[] = [
-    {
-      title: "Tipos de maquinas de tatuar", 
-      subMenuList: [{title: "Máquina de bobina", link:"/maquina-de-bobina"}, {title: "Máquina rotativa", link: "/maquina-rotativa"}, {title: "Máquina de tatuar Pen", link: "/maquina-de-tatuar-pen"}]   
-    }, 
-    {
-      title: "Marcas", 
-      subMenuList: [{title: "Cheyenne", link:"https://www.google.cl/"}, {title: "Dragonhawk", link: "#"}, {title: "Hawink", link: "#"}, {title: "Stigma", link: "#"}, {title: "Atomus", link: "#"}, {title: "Solong Tattoo", link: "#"}] 
-    } 
-  ]
+  {
+    title: "Tipos de maquinas de tatuar",
+    subMenuList: [
+      { title: "Máquina de bobina", link: "/maquina-de-bobina" },
+      { title: "Máquina rotativa", link: "/maquina-rotativa" },
+      { title: "Máquina de tatuar Pen", link: "/maquina-de-tatuar-pen" },
+    ],
+  },
+  {
+    title: "Marcas",
+    subMenuList: [
+      { title: "Cheyenne", link: "https://www.google.cl/" },
+      { title: "Dragonhawk", link: "#" },
+      { title: "Hawink", link: "#" },
+      { title: "Stigma", link: "#" },
+      { title: "Atomus", link: "#" },
+      { title: "Solong Tattoo", link: "#" },
+    ],
+  },
+];
 
-  // En este array se agregan los titulos de los NavMenuLink en la navBar //
+// En este array se agregan los titulos de los NavMenuLink en la navBar //
 
-  const navMenuLinks= [ {title: "kit tatuaje principiante", url:"http://www.google.cl"},{title: "kit tatuaje pofesional", url:"http://www.google.cl"}, {title: "Nuestras", url:"http://www.google.cl"}]
+const navMenuLinks = [
+  { title: "kit tatuaje principiante", url: "http://www.google.cl" },
+  { title: "kit tatuaje pofesional", url: "http://www.google.cl" },
+  { title: "Nuestras", url: "http://www.google.cl" },
+];
 ---
 
 <header>
-    <div class='flex flex-wrap shrink py-1 px-3 bg-slate-300'>
-      <div class='flex item-center ml-5'>
-       <a href="/"><img src="/images/Tatoo-machines-logo.png" alt="Logo" class='h-[80px]'/></a> 
-      </div>
-      <div class='ml-5 flex-grow flex items-center z-20 flex-wrap-reverse sm:flex-wrap'>
-        { navMenuInfo.map(navMenu => (
-            <DropdownMenu title={navMenu.title} subMenuList={navMenu.subMenuList} />
-        ))}
-        { navMenuLinks.map(link=>(
-           <NavMenuLink title={link.title} url={link.url}/> 
-        )) }
-        
-      </div>
+  <div class="flex flex-wrap shrink py-1 px-3 bg-slate-300">
+    <div class="flex item-center ml-5">
+      <a href="/"
+        ><img
+          src="/images/Tatoo-machines-logo.png"
+          alt="Logo"
+          class="h-[80px]"
+        />
+      </a>
     </div>
-  </header>
+    <div
+      class="ml-5 flex-grow flex items-center z-20 flex-wrap-reverse sm:flex-wrap">
+      {
+        navMenuInfo.map((navMenu) => (
+          <DropdownMenu
+            title={navMenu.title}
+            subMenuList={navMenu.subMenuList}
+          />
+        ))
+      }
+      {
+        navMenuLinks.map((link) => (
+          <NavMenuLink title={link.title} url={link.url} />
+        ))
+      }
+    </div>
+  </div>
+</header>

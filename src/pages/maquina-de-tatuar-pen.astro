@@ -1,78 +1,134 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from "../components/Header.astro"
-import PageIndex from "../components/PageIndex.astro"
-import BackToIndexButton from '../components/BackToIndexButton.astro';
-
-
-
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import PageIndex from "../components/PageIndex.astro";
+import BackToIndexButton from "../components/BackToIndexButton.astro";
 
 const pageIndexProps = [
   {
     seccionTitle: "Máquinas de tatuar Pen",
-    seccionTitleLink:"#maquina-tatuar-pen",
-    subSeccions: [{ title: "Maquinas de tatuar Pen. Cartuchos", link: "#cartuchos-maquina-tatuar-pen"}, { title: "Razones para utilizar una maquina de tatuar pen", link: "#razones-maquina-pen"}]
-  }
-]
-
+    seccionTitleLink: "#maquina-tatuar-pen",
+    subSeccions: [
+      {
+        title: "Maquinas de tatuar Pen. Cartuchos",
+        link: "#cartuchos-maquina-tatuar-pen",
+      },
+      {
+        title: "Razones para utilizar una maquina de tatuar pen",
+        link: "#razones-maquina-pen",
+      },
+    ],
+  },
+];
 ---
 
 <Layout title="Frontend Mentor | Intro section with dropdown navigation.">
-	<main class="container mx-auto px-20">
-	  <div class="grid grid-cols-1 lg:pt-5  max-w-[600px] mx-auto">
-  		<div class="flex flex-col lg:flex lg:flex-row items-center relative z-0">
-  		  <div>
-				  <h1 id="maquina-tatuar-pen" class="text-almost-black text-3xl lg:text-[4rem] lg:leading-[5rem] font-bold text-center mt-4">Maquinas de tatuar pen</h1>
-  				<p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Como su nombre en inglés lo indica, son máquinas de estilo lápiz y hay muchos tatuadores que están optando por estos modelos. La razón es que son mucho más cómodas para trazar y es como estar dibujando con bolígrafo sobre la piel.
-  				</p>
-  		  </div>  		  
-  		</div>
-      <div class=" flex justify-center mt-8 mb-6">
-        <img class="block object-scale-down rounded"  src="/images/maquina-tatuar-pen-hero.jpg" alt="Hero">
-        <img class="block object-scale-down rounded"  src="/images/maquina-tatuar-pen-tatoo.jpeg" alt="Hero">
+  <main class="container mx-auto px-20">
+    <div class="grid grid-cols-1 lg:pt-5 max-w-[600px] mx-auto">
+      <div class="flex flex-col lg:flex lg:flex-row items-center relative z-0">
+        <div>
+          <h1
+            id="maquina-tatuar-pen"
+            class="text-almost-black text-3xl lg:text-[4rem] lg:leading-[5rem] font-bold text-center mt-4">
+            Maquinas de tatuar pen
+          </h1>
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            Como su nombre en inglés lo indica, son máquinas de estilo lápiz y
+            hay muchos tatuadores que están optando por estos modelos. La razón
+            es que son mucho más cómodas para trazar y es como estar dibujando
+            con bolígrafo sobre la piel.
+          </p>
+        </div>
+      </div>
+      <div class="flex justify-center mt-8 mb-6">
+        <img
+          class="block object-scale-down rounded"
+          src="/images/maquina-tatuar-pen-hero.jpg"
+          alt="Hero"
+        />
+        <img
+          class="block object-scale-down rounded"
+          src="/images/maquina-tatuar-pen-tatoo.jpeg"
+          alt="Hero"
+        />
       </div>
       <div class="flex mt-5">
-      <PageIndex seccions={pageIndexProps} />
+        <PageIndex seccions={pageIndexProps} />
       </div>
       <div class="flex flex-col lg:flex lg:flex-row items-center relative z-0">
-  		  <div>
-          <br/>
-				  <h2  id="cartuchos-maquina-tatuar-pen" class="text-4xl font-bol text-black mt-6">Maquinas de tatuar Pen. Cartuchos</h2>
-  				<p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            La última evolución en máquinas para tatuajes rotativas, son las que utilizan un mecanismo de cartuchos de agujas. Los cartuchos sustituyen a las agujas convencionales, pudiendo cambiar de tamaño de aguja con un simple giro del cartucho. El uso de esta clase de cartuchos está especialmente diseñado para las máquinas de tatuar tipo Pen, que veremos a continuación, pero también está extendido dentro del mundo de las máquinas para tatuar rotativas.  				</p>
-            <div class=" flex justify-center mt-8 mb-6">
-              <img class="block object-scale-down rounded"  src="/images/cartuchos.jpg" alt="Hero">
-            </div>
-            <div class=" flex justify-center mt-8 mb-6">
-              <img class="block object-scale-down rounded"  src="/images/kit-pen-tatuar.jpg" alt="Hero">
-            </div>
-          
-          
-            <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-              La diferencia de esas máquinas rotativas de tatuaje para cartuchos con las máquinas de tatuaje rotativas clásicas es que, las utilizadas con cartuchos, cuentan con una varilla que acciona el cartucho conectada directamente a la biela del motor eléctrico. Al evitar la utilización de agujas para tatuar convencionales, evitamos el rozamiento de éstas con el grip y conseguimos un movimiento aún más silencioso.
-            </p>
-            <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Estas máquinas son muy utilizadas para tatuadores del estilo freehand por sus posibilidades ergonómicas y diseños amoldables. Además, son muy ligeras, lo que permite tener más libertad a la hora de trazar y aguantar más las sesiones muy extensas.  				</p>
-          <h2  id="razones-maquina-pen" class="text-4xl font-bol text-black mt-6">Razones para utilizar una maquina de tatuar pen</h2>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-           Recordemos que esto es siempre preferencia del tatuador, no hay máquinas mejores o peores, simplemente diseños que se ajustan más a otros dependiendo de lo que se quiera hacer.
+        <div>
+          <br />
+          <h2
+            id="cartuchos-maquina-tatuar-pen"
+            class="text-4xl font-bol text-black mt-6">
+            Maquinas de tatuar Pen. Cartuchos
+          </h2>
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            La última evolución en máquinas para tatuajes rotativas, son las que
+            utilizan un mecanismo de cartuchos de agujas. Los cartuchos
+            sustituyen a las agujas convencionales, pudiendo cambiar de tamaño
+            de aguja con un simple giro del cartucho. El uso de esta clase de
+            cartuchos está especialmente diseñado para las máquinas de tatuar
+            tipo Pen, que veremos a continuación, pero también está extendido
+            dentro del mundo de las máquinas para tatuar rotativas.
+          </p>
+          <div class="flex justify-center mt-8 mb-6">
+            <img
+              class="block object-scale-down rounded"
+              src="/images/cartuchos.jpg"
+              alt="Hero"
+            />
+          </div>
+          <div class="flex justify-center mt-8 mb-6">
+            <img
+              class="block object-scale-down rounded"
+              src="/images/kit-pen-tatuar.jpg"
+              alt="Hero"
+            />
+          </div>
 
-  				</p>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            Lo innovador de estas máquinas es que se puede ajustar el voltaje y la potencia según las necesidades.
-
-            Pero además, y este es el dato más importante, pueden usarse de forma inalámbrica, permitiendo al tatuador tener más libertad a la hora de trabajar y moverse por el espacio sin tener que molestar al cliente.          </p>
-          <p class=" pt-5 lg:pt-[2rem] lg:text-xl">
-            En el mercado podemos encontrar multitud de marcas comercializando sus máquinas para tatuar tipo pen pero, si tuviéramos que destacar una, sería las máquinas de Cheyenne, quienes revolucionaron el mercado del tatuaje e introdujeron una gran gama de máquinas para tatuar tipo pen.          </p>
-         
-          
-          
-          
-          
-  		  </div>
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            La diferencia de esas máquinas rotativas de tatuaje para cartuchos
+            con las máquinas de tatuaje rotativas clásicas es que, las
+            utilizadas con cartuchos, cuentan con una varilla que acciona el
+            cartucho conectada directamente a la biela del motor eléctrico. Al
+            evitar la utilización de agujas para tatuar convencionales, evitamos
+            el rozamiento de éstas con el grip y conseguimos un movimiento aún
+            más silencioso.
+          </p>
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            Estas máquinas son muy utilizadas para tatuadores del estilo
+            freehand por sus posibilidades ergonómicas y diseños amoldables.
+            Además, son muy ligeras, lo que permite tener más libertad a la hora
+            de trazar y aguantar más las sesiones muy extensas.
+          </p>
+          <h2
+            id="razones-maquina-pen"
+            class="text-4xl font-bol text-black mt-6">
+            Razones para utilizar una maquina de tatuar pen
+          </h2>
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            Recordemos que esto es siempre preferencia del tatuador, no hay
+            máquinas mejores o peores, simplemente diseños que se ajustan más a
+            otros dependiendo de lo que se quiera hacer.
+          </p>
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            Lo innovador de estas máquinas es que se puede ajustar el voltaje y
+            la potencia según las necesidades. Pero además, y este es el dato
+            más importante, pueden usarse de forma inalámbrica, permitiendo al
+            tatuador tener más libertad a la hora de trabajar y moverse por el
+            espacio sin tener que molestar al cliente.
+          </p>
+          <p class="pt-5 lg:pt-[2rem] lg:text-xl">
+            En el mercado podemos encontrar multitud de marcas comercializando
+            sus máquinas para tatuar tipo pen pero, si tuviéramos que destacar
+            una, sería las máquinas de Cheyenne, quienes revolucionaron el
+            mercado del tatuaje e introdujeron una gran gama de máquinas para
+            tatuar tipo pen.
+          </p>
+        </div>
         <BackToIndexButton />
-		</div>
-  </div>
-	</main>
+      </div>
+    </div>
+  </main>
 </Layout>
