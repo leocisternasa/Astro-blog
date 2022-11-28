@@ -28,6 +28,19 @@ import Footer from "../components/Footer.astro";
       href="./images/favicon-32x32.png"
     />
 
+    <script
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id=G-W47CH0ZSWR"
+    ></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-W47CH0ZSWR");
+    </script>
+
     <title>{title}</title>
   </head>
   <body class="text-medium-gray bg-almost-white z-0">
