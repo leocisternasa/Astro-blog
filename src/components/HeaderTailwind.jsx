@@ -32,11 +32,6 @@ const tiposDeMaquinas = [
     href: "/maquina-de-tatuar-pen",
     icon: ShieldCheckIcon,
   },
-  {
-    name: "Freidora de aire pal Chinito",
-    href: "/freidora-de-aire",
-    icon: ShieldCheckIcon,
-  },
 ];
 
 const marcas = [
@@ -87,9 +82,9 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <Popover className="relative bg-slate-300 h-[100px]">
+    <Popover className="relative bg-slate-300 h-[90px]">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
-        <div className="flex items-center justify-between border-gray-100 py-4 md:justify-start md:space-x-10">
+        <div className="flex items-center justify-between border-gray-100 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="/">
               <span className="sr-only">Your Company</span>
@@ -113,8 +108,9 @@ export default function Example() {
                   <Popover.Button
                     className={classNames(
                       open ? "text-gray-900" : "text-gray-500",
-                      "group inline-flex items-center rounded-md bg-slate-300 text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                    )}>
+                      "group inline-flex items-center rounded-md bg-slate-300 text-lg font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                    )}
+                  >
                     <span>Tipos de máqunas de tatuar</span>
                     <ChevronDownIcon
                       className={classNames(
@@ -132,7 +128,8 @@ export default function Example() {
                     enterTo="opacity-100 translate-y-0"
                     leave="transition ease-in duration-150"
                     leaveFrom="opacity-100 translate-y-0"
-                    leaveTo="opacity-0 translate-y-1">
+                    leaveTo="opacity-0 translate-y-1"
+                  >
                     <Popover.Panel className="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
                       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
@@ -140,9 +137,10 @@ export default function Example() {
                             <a
                               key={item.name}
                               href={item.href}
-                              className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
+                              className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
+                            >
                               <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
+                                <p className="text-lg font-medium text-gray-900">
                                   {item.name}
                                 </p>
                               </div>
@@ -162,8 +160,9 @@ export default function Example() {
                   <Popover.Button
                     className={classNames(
                       open ? "text-gray-900" : "text-gray-500",
-                      "group inline-flex items-center rounded-md bg-slate-300 text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                    )}>
+                      "group inline-flex items-center rounded-md bg-slate-300 text-lg font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                    )}
+                  >
                     <span>Marcas</span>
                     <ChevronDownIcon
                       className={classNames(
@@ -181,7 +180,8 @@ export default function Example() {
                     enterTo="opacity-100 translate-y-0"
                     leave="transition ease-in duration-150"
                     leaveFrom="opacity-100 translate-y-0"
-                    leaveTo="opacity-0 translate-y-1">
+                    leaveTo="opacity-0 translate-y-1"
+                  >
                     <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
                       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
@@ -189,13 +189,11 @@ export default function Example() {
                             <a
                               key={item.name}
                               href={item.href}
-                              className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
+                              className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
+                            >
                               <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
+                                <p className="text-lg font-medium text-gray-900">
                                   {item.name}
-                                </p>
-                                <p className="mt-1 text-sm text-gray-500">
-                                  {item.description}
                                 </p>
                               </div>
                             </a>
@@ -210,12 +208,14 @@ export default function Example() {
 
             <a
               href="/kit-tatuaje-principiante"
-              className="text-base font-medium text-gray-500 hover:text-gray-900">
+              className="text-lg font-medium text-gray-500 hover:text-gray-900"
+            >
               Kit tatuaje principiante
             </a>
             <a
               href="/kit-tatuaje-profesional"
-              className="text-base font-medium text-gray-500 hover:text-gray-900">
+              className="text-lg font-medium text-gray-500 hover:text-gray-900"
+            >
               Kit tatuaje profesional
             </a>
           </Popover.Group>
@@ -229,10 +229,12 @@ export default function Example() {
         enterTo="opacity-100 scale-100"
         leave="duration-100 ease-in"
         leaveFrom="opacity-100 scale-100"
-        leaveTo="opacity-0 scale-95">
+        leaveTo="opacity-0 scale-95"
+      >
         <Popover.Panel
           focus
-          className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden z-10">
+          className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden z-10"
+        >
           <div className="divide-y-2  rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
@@ -258,8 +260,9 @@ export default function Example() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
-                      <span className="ml-3 text-base font-medium text-gray-900">
+                      className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+                    >
+                      <span className="ml-3 text-lg font-medium text-gray-900">
                         {item.name}
                       </span>
                     </a>
@@ -273,7 +276,8 @@ export default function Example() {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-base font-medium text-gray-900 hover:text-gray-700">
+                    className="text-lg font-medium text-gray-900 hover:text-gray-700"
+                  >
                     {item.name}
                   </a>
                 ))}
@@ -283,13 +287,15 @@ export default function Example() {
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <a
                   href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700">
+                  className="text-lg font-medium text-gray-900 hover:text-gray-700"
+                >
                   Kit tatuaje principiante
                 </a>
 
                 <a
                   href="/kit-tatuaje-profesional"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700">
+                  className="text-lg font-medium text-gray-900 hover:text-gray-700"
+                >
                   Kit tatuaje profesional
                 </a>
               </div>
