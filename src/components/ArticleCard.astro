@@ -1,0 +1,47 @@
+---
+const { articleProps } = Astro.props;
+---
+
+<div
+  class="flex flex-col justify-center mt-8 mb-6 w-[200px] shadow-lg shadow-gray-400 p-4"
+>
+  <a href={articleProps.href}>
+    <img
+      class="block object-scale-down w-[150px]"
+      src="//wms-eu.amazon-adsystem.com/panda/20070822/ES/img/a-logo-amazon.png"
+    />
+    <img
+      class="block object-scale-down h-[150px]"
+      src={articleProps.imgSrc}
+      alt="Hero"
+      title={articleProps.title}
+    />
+  </a>
+  <div class="mb-2">
+    <a
+      rel="nofollow"
+      class="text-[#0000FF]"
+      target="_blank"
+      title={articleProps.title}
+      href={articleProps.href}
+      >{articleProps.description}
+    </a>
+  </div>
+  <div class="mb-2">
+    <a href={articleProps.href}>
+      <span class="text-almost-black">{articleProps.price}</span>
+    </a>
+  </div>
+  <div class="bg-yellow-500 max-w-[150px] h-[40px] flex flex-row">
+    <a href={articleProps.href}
+      ><img
+        class="mr-1 w-[30px] h-[30px] ml-1 mt-1"
+        src="https://wms-eu.amazon-adsystem.com/panda/20070822/US/img/cart.gif"
+        alt="amazon-logo"
+      />
+    </a>
+    <a rel="nofollow" class="pt-1" href="https://amzn.to/3ArBqQS"
+      ><span class="text-black">Ver oferta</span>
+    </a>
+  </div>
+</div>
