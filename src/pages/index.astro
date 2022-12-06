@@ -196,10 +196,6 @@ const pageIndexProps = [
     seccionTitleLink: "#tipos-maquinas-de-tatuar",
     subSeccions: [
       {
-        title: "Tipos de máquinas de Tatuar",
-        link: "#tipos-maquinas-de-tatuar",
-      },
-      {
         title: "Máquinas de tatuar de bobina",
         link: "#maquinas-tatuar-bobina",
       },
@@ -207,9 +203,9 @@ const pageIndexProps = [
         title: "Máquinas de tatuar rotativas",
         link: "#maquinas-tatuar-rotativas",
       },
-      { title: "Máquinas de tatuar tipo Pen", link: "#maquinas-tatuar-pen" },
+      { title: "Máquinas de tatuar tipo pen", link: "#maquinas-tatuar-pen" },
       {
-        title: "Máquinas de tatuar Neumáticas",
+        title: "Máquinas de tatuar neumáticas",
         link: "#maquinas-tatuar-neumaticas",
       },
     ],
@@ -287,7 +283,7 @@ const pageIndexProps = [
           las funcionalidades y materiales.
         </p>
         <div
-          class="flex flex-row justify-center flex-wrap lg:flex lg:flex-row lg:flex-wrap space-x-2 mb-5"
+          class="flex flex-row justify-center flex-wrap lg:flex lg:flex-row lg:flex-wrap space-x-2 mb-5 mt-5"
         >
           {
             mejoresMaquinasProps.map((article) => (
@@ -314,12 +310,12 @@ const pageIndexProps = [
       </div>
       <h2
         id="tipos-maquinas-de-tatuar"
-        class="text-almost-black text-3xl text-center mt-5 border-b-2 border-b-gray-400 pb-2"
+        class="text-black text-3xl text-center mt-5 border-b-2 border-b-gray-400 pb-2"
       >
         ¿Qué tipos de máquinas de tatuar hay?
       </h2>
       <p class="pt-5 lg:pt-[2rem] text-xl">
-        <strong>Lo mas importante!.</strong> La máquina de tatuar debe ser ergonómica,
+        <strong>Lo mas importante!</strong> La máquina de tatuar debe ser ergonómica,
         es decir, debe adaptarse a la mano. Una máquina inadecuada puede causar molestias
         y calambres en los dedos del tatuador.
       </p>
@@ -378,11 +374,11 @@ const pageIndexProps = [
       </p><br /><br />
       <h3
         id="maquinas-tatuar-rotativas"
-        class="text-2xl font-bol text-almost-black pb-2 text-center"
+        class="text-2xl font-bol text-black pb-2 text-center"
       >
         <strong>
           <a href="/maquina-rotativa"
-            >Máquinas de tatuar rotativas: Las preferidas por principiantes y
+            >Máquinas de tatuar rotativas: las preferidas por principiantes y
             pros</a
           >
         </strong>
@@ -425,65 +421,71 @@ const pageIndexProps = [
             Máquinas de tatuar tipo Pen: Las rotativas más ergonómicas</strong
           >
         </a>
-        <p class="pt-5 lg:pt-[2rem] text-xl">
-          Como sugiere su nombre en inglés, estas herramientas tienen <strong
-            >forma de lápiz</strong
-          >. Son muchos los tatuadores que eligen estos modelos. <strong
-            >Las razónes principales: comodidad, ergonomía y es como dibujar con
-            un lápiz obre la piel</strong
-          >
-        </p>
-        <div class="flex justify-center">
-          <img
-            class="block object-scale-down rounded h-[400px] mt-5"
-            src="images/maquina-de-tatuajes-pen.webp"
-            alt="Hero"
-          />
-        </div><br />
-        <p class="pt-5 lg:pt-[2rem] text-xl">
-          La novedad de estos aparatos es que se puede cambiar el voltaje y la
-          potencia cuando sea necesario. Son ampliamente utilizados por
-          tatuadores estilo <strong>"mano alzada" o "freehand"</strong> por sus características
-          ergonómicas y diseño flexible Además, son muy ligeras, lo que te permite
-          tenerlas más libertad para dibujar y tener sesiones mas largas.
-        </p>
-        <p class="pt-5 lg:pt-[2rem] text-xl">
-          Otra ventaja que se debe considerar es que puede usarse de forma
-          <strong>inalámbrica</strong>, permitiendo mayor libertad para el
-          tatuador. <strong
-            >Estas máquinas sirven para tatuar lineas o relleno (sombreado) de
-            tatuajes</strong
-          >
-        </p><br />
-        <h3
-          id="maquinas-tatuar-neumaticas"
-          class="text-2xl text-black pb-2 mt-6 text-center"
-        >
-          <strong> Máquinas de tatuar Neumáticas</strong>
-        </h3>
-        <p class="pt-5 lg:pt-[2rem] text-xl">
-          Es el tipo de máquinta para tatuar más moderna pero al mismo tiempo se
-          trata de la más costosa. Sin embargo poco a poco van ganando mas
-          adeptos ya que cuenta con varias ventajas en relación con los otros
-          tipos.
-        </p>
-        <div class="flex justify-center">
-          <img
-            class="block rounded h-[400px] mt-5"
-            src="images/maquina-tatuar-neumatica.jpg"
-            alt="Hero"
-          />
-        </div><br />
-        <p class="pt-5 lg:pt-[2rem] text-xl">
-          Las <strong>máquinas de tatuar neumáticas</strong> hacen uso de un sistema
-          de aire comprimido, por lo que requieren de un compresor de aire para que
-          trabajen correctament. De igual forma poseen un sistema eléctrico para
-          poder funcionar en caso de no tener un compresor. Son máquinas silenciosas
-          y más ligeras pero menos masivas y cuesta mas encontrarlas.
-        </p>
-
-        <BackToIndexButton />
       </h3>
+      <p class="pt-5 lg:pt-[2rem] text-xl">
+        Como sugiere su nombre en inglés, estas herramientas tienen <strong
+          >forma de lápiz</strong
+        >.
+        <br />
+        Son muchos los tatuadores que eligen estos modelos.
+        <br />
+        <strong
+          >Las razónes principales: comodidad, ergonomía y es como dibujar con
+          un lápiz sobre la piel</strong
+        >
+      </p>
+      <div class="flex justify-center">
+        <img
+          class="block object-scale-down rounded h-[400px] mt-5"
+          src="images/maquina-de-tatuajes-pen.webp"
+          alt="Hero"
+        />
+      </div><br />
+      <p class="pt-5 lg:pt-[2rem] text-xl">
+        La novedad de estos aparatos es que se puede cambiar el voltaje y la
+        potencia cuando sea necesario.
+      </p>
+      <p class="pt-5 lg:pt-[2rem] text-xl">
+        Son ampliamente utilizados por tatuadores estilo <strong
+          >"mano alzada" o "freehand"</strong
+        > por sus características ergonómicas y diseño flexible además, son muy ligeras,
+        lo que te permite tener más libertad para dibujar y tener sesiones mas largas.
+      </p>
+      <p class="pt-5 lg:pt-[2rem] text-xl">
+        Otra ventaja que se debe considerar es que puede usarse de forma
+        <strong>inalámbrica</strong>, permitiendo mayor libertad para el
+        tatuador. <strong
+          >Estas máquinas sirven para tatuar lineas o relleno (sombreado) de
+          tatuajes</strong
+        >
+      </p><br />
+      <h3
+        id="maquinas-tatuar-neumaticas"
+        class="text-2xl text-black pb-2 mt-6 text-center"
+      >
+        <strong> Máquinas de tatuar neumáticas</strong>
+      </h3>
+      <p class="pt-5 lg:pt-[2rem] text-xl">
+        Es el tipo de máquinta para tatuar más moderna pero al mismo tiempo se
+        trata de la más costosa. Sin embargo poco a poco van ganando mas adeptos
+        ya que cuenta con varias ventajas en relación con los otros tipos.
+      </p>
+      <div class="flex justify-center">
+        <img
+          class="block rounded h-[400px] mt-5"
+          src="images/maquina-tatuar-neumatica.jpg"
+          alt="Hero"
+        />
+      </div><br />
+      <p class="pt-5 lg:pt-[2rem] text-xl">
+        Las <strong>máquinas de tatuar neumáticas</strong> hacen uso de un sistema
+        de aire comprimido, por lo que requieren de un compresor de aire para que
+        trabajen correctament. De igual forma poseen un sistema eléctrico para poder
+        funcionar en caso de no tener un compresor. Son máquinas silenciosas y más
+        ligeras pero menos masivas y cuesta mas encontrarlas.
+      </p>
+
+      <BackToIndexButton />
     </div>
   </main>
 </Layout>
