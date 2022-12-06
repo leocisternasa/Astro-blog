@@ -225,35 +225,35 @@ const pageIndexProps = [
       <div class="flex flex-col lg:flex lg:flex-row items-center relative z-0">
         <div>
           <h1
-            class="text-almost-black text-5xl lg:text-[4rem] lg:leading-[5rem] font-bold text-center mt-4"
+            class="text-almost-black text-[1.5rem] lg:text-[3rem] lg:leading-[5rem] font-bold text-center mt-4"
           >
-            Maquinas de tatuar
+            Máquinas de tatuar
           </h1>
-          <p class="pt-5 text-xl lg:pt-[2rem] lg:text-xl">
-            Hoy en día existen una gran variedad de marcas y modelos de máquinas
-            de tatuar pero <strong
-              >¿Cómo elegir qué maquina de tatuar comprar?</strong
-            ><br /><br />
-            Antes que todo es importante conocer los tipos de maquinas disponibles
-            en el mercado y que ofrecen las marcas para poder seleccionar la maquina
-            mas adecuada para ti<br /><br />
-          </p>
+          <div class="flex gap-10">
+            <p class="pt-5 text-xl lg:pt-[2rem] lg:text-xl">
+              Hoy en día existen una gran variedad de marcas y modelos de
+              máquinas de tatuar pero <strong
+                >¿Cómo elegir qué maquina de tatuar comprar?</strong
+              ><br /><br />
+              Antes que todo es importante conocer los tipos de maquinas disponibles
+              en el mercado y que ofrecen las marcas para poder seleccionar la maquina
+              mas adecuada para ti<br /><br />
+            </p>
+            <img
+              class="block object-scale-down rounded lg:max-w-[50%]"
+              src="images/máquinas-tinta-y-bosquejo-del-tatuaje-74235416.jpg"
+              alt="Hero"
+            />
+          </div>
         </div>
-      </div>
-      <div class="flex justify-center">
-        <img
-          class="block object-scale-down rounded lg:max-w-[50%]"
-          src="images/máquinas-tinta-y-bosquejo-del-tatuaje-74235416.jpg"
-          alt="Hero"
-        />
       </div>
       <div class="flex mt-9 mb-10">
         <PageIndex seccions={pageIndexProps} />
       </div>
-      <div class="flex flex-col relative">
+      <div class="flex flex-col relative mt-4">
         <h2
           id="mejores-maquinas-tatuar"
-          class="text-almost-black text-4xl text-center mt-5 border-b-2 border-b-red-400 pb-2"
+          class="text-almost-black text-4xl text-center mt-5 border-b-2 border-b-gray-400 pb-2"
         >
           Mejores máquinas de tatuar
         </h2>
@@ -298,129 +298,133 @@ const pageIndexProps = [
 
         <h3
           id="maquinas-tatuar-baratas"
-          class="text-3xl text-black text-center border-b-2 border-b-red-400 pb-2"
+          class="text-3xl text-black text-center border-b-2 border-b-gray-400 pb-2 mt-6"
         >
-          Máquinas de tatuar baratas: Recomendados para iniciar a tatuar.
+          Máquinas de tatuar baratas: recomendados para iniciar a tatuar
         </h3>
-        <div
-          class="flex flex-row justify-center flex-wrap lg:flex lg:flex-row lg:flex-wrap space-x-2 mb-5"
-        >
-          {
-            maquinasBaratasProps.map((article) => (
-              <ArticleCard articleProps={article} />
-            ))
-          }
-        </div>
-        <h2
-          id="tipos-maquinas-de-tatuar"
-          class="text-almost-black text-4xl text-center mt-5 border-b-2 border-b-red-400 pb-2"
-        >
-          ¿Qué tipos de máquinas de tatuar hay?
-        </h2>
-        <p class="pt-5 lg:pt-[2rem] text-xl">
-          <strong>Lo mas importante!.</strong> La máquina de tatuar debe ser ergonómica,
-          es decir, debe adaptarse a la mano. Una máquina inadecuada puede causar
-          molestias y calambres en los dedos del tatuador.
-        </p>
+      </div>
+      <div
+        class="flex flex-row justify-center flex-wrap lg:flex lg:flex-row lg:flex-wrap space-x-2 mb-5"
+      >
+        {
+          maquinasBaratasProps.map((article) => (
+            <ArticleCard articleProps={article} />
+          ))
+        }
+      </div>
+      <h2
+        id="tipos-maquinas-de-tatuar"
+        class="text-almost-black text-3xl text-center mt-5 border-b-2 border-b-gray-400 pb-2"
+      >
+        ¿Qué tipos de máquinas de tatuar hay?
+      </h2>
+      <p class="pt-5 lg:pt-[2rem] text-xl">
+        <strong>Lo mas importante!.</strong> La máquina de tatuar debe ser ergonómica,
+        es decir, debe adaptarse a la mano. Una máquina inadecuada puede causar molestias
+        y calambres en los dedos del tatuador.
+      </p>
 
-        <p class="pt-5 lg:pt-[2rem] text-xl">
-          Podemos encontrar diferentes <strong
-            >tipos de máquinas de tatuar</strong
-          > en el mercado, su uso depende del tipo de tatuaje que queramos realizar,
-          ergonomía, accesorios, etc.
-        </p>
-        <p class="pt-5 lg:pt-[2rem] text-xl">
-          En la actualidad existen tres tipos de maquinas de tatuar: <strong
-            >Las máquinas de bobina, rotativas y neumáticas o de aire</strong
-          >. Las dos primeras son las más difundidas mientras que las máquinas
-          de tatuar neumáticas, al ser mas modernas, su uso es menos difundido y
-          aun estan a prueba.
-        </p><br />
-        <h3
-          id="maquinas-tatuar-bobina"
-          class="text-3xl font-bol text-black border-b-2 border-b-black pb-2"
-        >
+      <p class="pt-5 lg:pt-[2rem] text-xl">
+        Podemos encontrar diferentes <strong>tipos de máquinas de tatuar</strong
+        > en el mercado, su uso depende del tipo de tatuaje que queramos realizar,
+        ergonomía, accesorios, etc.
+      </p>
+      <p class="pt-5 lg:pt-[2rem] text-xl">
+        En la actualidad existen tres tipos de maquinas de tatuar: <strong
+          >Las máquinas de bobina, rotativas y neumáticas o de aire</strong
+        >. Las dos primeras son las más difundidas mientras que las máquinas de
+        tatuar neumáticas, al ser mas modernas, su uso es menos difundido y aun
+        estan a prueba.
+      </p><br />
+      <h3
+        id="maquinas-tatuar-bobina"
+        class="text-2xl font-bol text-black pb-2 text-center mt-4"
+      >
+        <strong>
           <a href="/maquina-de-bobina"
             >Máquinas de tatuar de bobina: Las más vintage o clásicas</a
           >
-        </h3>
-        <p class="pt-5 lg:pt-[2rem] text-xl">
-          Las <a
-            href="/maquina-de-bobina"
-            class="font-bold underline cursor-pointer hover:text-almost-black"
-            >máquinas de bobina</a
-          > son quizás las más comunes o las que más se han expandido y podemos clasificarlas
-          como máquinas clásicas o tradicionales.
-        </p><br />
-        <div class="flex justify-center">
-          <img
-            class="block object-scale-down rounded h-[400px]"
-            src="images/maquina-tatuar-bobinas.max-1000x1000.format-webp.webp"
-            alt="Hero"
-          />
-        </div>
-        <p class="pt-5 lg:pt-[2rem] text-xl">
-          Estan confeccionadas por <strong>una o más bobinas</strong> y una armadura
-          en barra, utilizan electromagnetos para funcionar y la(s) aguja(s) van
-          soldadas.<br /><br />
-          <strong>Las máquinas de bobina para tatuar líneas</strong> suelen utilizar
-          un grupo de agujas en un patrón circular para la puesta de tinta en la
-          piel, mientras que las máquinas para sombras suelen tener estructuras más
-          pesadas y una mayor cantidad de agujas.
-        </p><br />
-        <p class="pt-5 lg:pt-[2rem] text-xl">
-          En general sirven para hacer solo un tipo de trazo (existen para
-          múltiples tipos de trazos pero suelen ser mas costosas), delineado o
-          sombreado, por lo que necesitarás mas de un equipo o accesorios
-          dependiendo de lo que desees crear.
-        </p><br /><br />
-        <h3
-          id="maquinas-tatuar-rotativas"
-          class="text-3xl font-bol text-almost-black border-b-2 border-b-black pb-2"
-        >
+        </strong>
+      </h3>
+      <p class="pt-5 lg:pt-[2rem] text-xl">
+        Las <a
+          href="/maquina-de-bobina"
+          class="font-bold underline cursor-pointer hover:text-almost-black"
+          >máquinas de bobina</a
+        > son quizás las más comunes o las que más se han expandido y podemos clasificarlas
+        como máquinas clásicas o tradicionales.
+      </p><br />
+      <div class="flex justify-center">
+        <img
+          class="block object-scale-down rounded h-[400px]"
+          src="images/maquina-tatuar-bobinas.max-1000x1000.format-webp.webp"
+          alt="Hero"
+        />
+      </div>
+      <p class="pt-5 lg:pt-[2rem] text-xl">
+        Estan confeccionadas por <strong>una o más bobinas</strong> y una armadura
+        en barra, utilizan electromagnetos para funcionar y la(s) aguja(s) van soldadas.<br
+        /><br />
+        <strong>Las máquinas de bobina para tatuar líneas</strong> suelen utilizar
+        un grupo de agujas en un patrón circular para la puesta de tinta en la piel,
+        mientras que las máquinas para sombras suelen tener estructuras más pesadas
+        y una mayor cantidad de agujas.
+      </p><br />
+      <p class="pt-5 lg:pt-[2rem] text-xl">
+        En general sirven para hacer solo un tipo de trazo (existen para
+        múltiples tipos de trazos pero suelen ser mas costosas), delineado o
+        sombreado, por lo que necesitarás mas de un equipo o accesorios
+        dependiendo de lo que desees crear.
+      </p><br /><br />
+      <h3
+        id="maquinas-tatuar-rotativas"
+        class="text-2xl font-bol text-almost-black pb-2 text-center"
+      >
+        <strong>
           <a href="/maquina-rotativa"
             >Máquinas de tatuar rotativas: Las preferidas por principiantes y
             pros</a
           >
-        </h3>
-        <p class="pt-5 lg:pt-[2rem] text-xl">
-          Las <a
-            href="/maquina-rotativa"
-            class="font-bold underline cursor-pointer hover:text-black"
-            >maquinas rotativas</a
-          > mas modernas y versátiles que las de bobinas y cuentan con un sólo motor,
-          por lo que no tienen bobinas, sino que utiliza un sistema de poleas. Suelen
-          ser la primera opción para muchos tatuadores por varias razones entre las
-          que cabe destacar que son<strong>
-            más silenciosas, vibran menos, causan menos daño a la piel y son
-            ideales para delinear y sombrear tatuajes</strong
-          >
-          de menor extensión, ya que son propensas a calentarse después de 2 horas
-          de uso. (las mas costosas poseen baterías que otorgan mayor tiempo de trabajo)
-        </p><br />
-        <div class="flex justify-center">
-          <img
-            class="block object-scale-down rounded h-[400px] mt-5"
-            src="images/maquinas-tatuar-rotativas.jpg"
-            alt="Hero"
-          />
-        </div><br />
-        <p class="pt-5 lg:pt-[2rem] text-xl">
-          Dentro de las máquinas rotativas también podemos encontrar las
-          llamadas <a
-            href="/maquina-tatuar-pen"
-            class="font-bold underline cursor-pointer hover:text-almost-black"
-            >máquinas de tatuar tipo Pen.</a
-          >
-        </p><br />
-        <h3
-          id="maquinas-tatuar-pen"
-          class="text-3xl font-bol text-black border-b-2 border-b-black pb-2"
+        </strong>
+      </h3>
+      <p class="pt-5 lg:pt-[2rem] text-xl">
+        Las <a
+          href="/maquina-rotativa"
+          class="font-bold underline cursor-pointer hover:text-black"
+          >maquinas rotativas</a
+        > mas modernas y versátiles que las de bobinas y cuentan con un sólo motor,
+        por lo que no tienen bobinas, sino que utiliza un sistema de poleas. Suelen
+        ser la primera opción para muchos tatuadores por varias razones entre las
+        que cabe destacar que son<strong>
+          más silenciosas, vibran menos, causan menos daño a la piel y son
+          ideales para delinear y sombrear tatuajes</strong
         >
-          <a href="/maquina-de-tatuar-pen">
-            Máquinas de tatuar tipo Pen: Las rotativas más ergonómicas</a
+        de menor extensión, ya que son propensas a calentarse después de 2 horas
+        de uso. (las mas costosas poseen baterías que otorgan mayor tiempo de trabajo)
+      </p><br />
+      <div class="flex justify-center">
+        <img
+          class="block object-scale-down rounded h-[400px] mt-5"
+          src="images/maquinas-tatuar-rotativas.jpg"
+          alt="Hero"
+        />
+      </div><br />
+      <p class="pt-5 lg:pt-[2rem] text-xl">
+        Dentro de las máquinas rotativas también podemos encontrar las llamadas <a
+          href="/maquina-tatuar-pen"
+          class="font-bold underline cursor-pointer hover:text-almost-black"
+          >máquinas de tatuar tipo Pen.</a
+        >
+      </p><br />
+      <h3
+        id="maquinas-tatuar-pen"
+        class="text-2xl font-bol text-black pb-2 mt-4 text-center"
+      >
+        <a href="/maquina-de-tatuar-pen">
+          <strong>
+            Máquinas de tatuar tipo Pen: Las rotativas más ergonómicas</strong
           >
-        </h3>
+        </a>
         <p class="pt-5 lg:pt-[2rem] text-xl">
           Como sugiere su nombre en inglés, estas herramientas tienen <strong
             >forma de lápiz</strong
@@ -453,9 +457,9 @@ const pageIndexProps = [
         </p><br />
         <h3
           id="maquinas-tatuar-neumaticas"
-          class="text-3xl text-black border-b-2 border-b-black pb-2"
+          class="text-2xl text-black pb-2 mt-6 text-center"
         >
-          Máquinas de tatuar Neumáticas
+          <strong> Máquinas de tatuar Neumáticas</strong>
         </h3>
         <p class="pt-5 lg:pt-[2rem] text-xl">
           Es el tipo de máquinta para tatuar más moderna pero al mismo tiempo se
@@ -479,7 +483,7 @@ const pageIndexProps = [
         </p>
 
         <BackToIndexButton />
-      </div>
+      </h3>
     </div>
   </main>
 </Layout>

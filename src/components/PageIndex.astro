@@ -1,15 +1,13 @@
 ---
 const { seccions } = Astro.props;
-
-console.log("indexsss", seccions);
 ---
 
-<div class="relative block group w-full lg:w-[65%]">
+<div class="relative block group w-full lg:w-[75%]">
   <div
     id="index"
     class="text-xl bg-slate-300 text-almost-black p-4 border-none rounded cursor-pointer"
   >
-    Contenido (Ve al punto que mas te interese)
+    <strong>Contenido</strong>
     <div
       class="bg-slate-200 rounded shadow-slate-50 z-10 group-hover:block mt-3"
     >
@@ -21,8 +19,7 @@ console.log("indexsss", seccions);
                 href={seccion.seccionTitleLink}
                 class="text-xl text-black pt-2 pb-2 pl-4 pr-4 block hover:bg-slate-400"
               >
-                <strong>{i + 1}. </strong>
-                {seccion.seccionTitle}
+                {i + 1}. {seccion.seccionTitle}
               </a>
               {seccion.subSeccions &&
                 seccion.subSeccions.map((subSeccion) => (
