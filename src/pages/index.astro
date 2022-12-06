@@ -130,6 +130,18 @@ const mejoresMaquinasProps = [
   },
 ];
 
+const maquinasBaratasProps = [
+  {
+    href: "https://www.amazon.es/dp/B0B3T91Q1G/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=50d34a51a29fa021a2d546a7defcbc69&creativeASIN=B0B3T91Q1G",
+    description:
+      "CNC Máquina de pluma de tatuaje-Máquina de cartucho de tatuaje con potencia inalámbrica...",
+    title:
+      "CNC Máquina de pluma de tatuaje-Máquina de cartucho de tatuaje con potencia inalámbrica de Motor sin núcleo importado de Alemania Pantalla LED digital para tatuadores profesionales CNC-M-CW2-7",
+    price: "EUR 269.99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/31B9AztWvzL._AC_AC_SR98,95_.jpg",
+  },
+];
 const pageIndexProps = [
   {
     seccionTitle: "Mejores máquinas de tatuar",
@@ -258,11 +270,17 @@ const pageIndexProps = [
           id="maquinas-tatuar-baratas"
           class="text-3xl text-black text-center underline decoration-red-400"
         >
-          Máquinas de tatuar baratas
+          Máquinas de tatuar baratas: Recomendados para iniciar a tatuar.
         </h3>
-        <h1 class="text-3xl text-center pt-5">
-          Aqui van las ofertas de amazon
-        </h1>
+        <div
+          class="flex flex-row justify-center flex-wrap lg:flex lg:flex-row lg:flex-wrap space-x-2 mb-5"
+        >
+          {
+            maquinasBaratasProps.map((article) => (
+              <ArticleCard articleProps={article} />
+            ))
+          }
+        </div>
         <h2
           id="tipos-maquinas-de-tatuar"
           class="text-almost-black text-4xl text-center mt-5 underline decoration-red-500"
