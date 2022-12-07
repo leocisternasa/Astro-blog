@@ -3,6 +3,164 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import PageIndex from "../components/PageIndex.astro";
 import BackToIndexButton from "../components/BackToIndexButton.astro";
+import ArticleCard from "../components/ArticleCard.astro";
+
+const kitsPrincipiantesBaratosProps = [
+  {
+    href: "https://www.amazon.es/dp/B08BRNL95V/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=de2c0ed7ad5e1553397325af7e1c0abb&creativeASIN=B08BRNL95V",
+    description:
+      "HAWINK Tattoo Machine Pen Kit Máquina rotativa de tatuaje con fuente de alimentación inalámbrica para...",
+    title:
+      "HAWINK Tattoo Machine Pen Kit Máquina rotativa de tatuaje con fuente de alimentación inalámbrica para tatuaje 20 piezas Cartucho de agujas de tatuaje Cinta de agarre de tatuaje negro EM136P199RCAY20-1",
+    price: "EUR 59,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/416+CR5doHL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B09PMX54Q1/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=41fa82936b4ff64506c7397e7f10e027&creativeASIN=B09PMX54Q1",
+    description:
+      "Solong kit Tatuaje Pistola Rotatoria Máquina de Tatuaje Kit Completo de Tatuaje Profesional con 20 Unids...",
+    title:
+      "Solong kit Tatuaje Pistola Rotatoria Máquina de Tatuaje Kit Completo de Tatuaje Profesional con 20 Unids Cartucho Agujas Tatuaje RCA Tatuaje Batería SLP1KITP199…",
+    price: "EUR 69,00",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/41Ry+lx2EML._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B09PV1Z2PQ/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=b0c164b6643d23a2c2a42bad9e928444&creativeASIN=B09PV1Z2PQ",
+    description:
+      "STIGMA Kit de Tatuaje con Bateria y Agujas para Tatuar 20pcs Stigma Pro Needles Tattoo kit with Battery S...",
+    title:
+      "STIGMA Kit de Tatuaje con Bateria y Agujas para Tatuar 20pcs Stigma Pro Needles Tattoo kit with Battery STP7KITP199-1",
+    price: "EUR 50,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51F7apqKviL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B075Q6K6DZ/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=9da674f92093a2126b400b3ba2b6523b&creativeASIN=B075Q6K6DZ",
+    description:
+      "ATOMUS Profession Complete Tattoo Machine Set Gun Tatouage Bloc Alimentation Set Accessoires Pied Pedale...",
+    title:
+      "ATOMUS Profession Complete Tattoo Machine Set Gun Tatouage Bloc D'Alimentation Set Accessoires Pied PéDale Clip Cord Tattoo Needle Caoutchouc Machine O Bague Et Caoutchouc Bander De Tattoo Machine Kit",
+    price: "EUR 32,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/41hA7DT8ZvL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B09JG5Q437/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=d5e4309f302c8fb7f6e5e225d3845860&creativeASIN=B09JG5Q437",
+    description:
+      "Máquina de tatuaje inalámbrica HAWINK Kit de pluma rotativa 20 piezas Cartucho de agujas de tatuaje Cinta de...",
+    title:
+      "Máquina de tatuaje inalámbrica HAWINK Kit de pluma rotativa 20 piezas Cartucho de agujas de tatuaje Cinta de agarre para tatuaje Envoltura con maleta EM155P199RCAEN02-1",
+    price: "EUR 69,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51AM64aTzbL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B0B5DGWFS7/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=eb1cb8b7dcd2cdd413e1908aa7177173&creativeASIN=B0B5DGWFS7",
+    description:
+      "SHUAIGUO Kit de máquina de tatuaje profesional Pluma rotativa de fuente de alimentación de tatuaje con agujas...",
+    title:
+      "SHUAIGUO Kit de máquina de tatuaje profesional Pluma rotativa de fuente de alimentación de tatuaje con agujas de pedal para maquillaje de tatuaje permanente Microblading de cejas para principiantes",
+    price: "EUR 58,75",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/514WQ2o2z7L._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B08BRNL95V/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=bceb20b98f4fb86d888249fc81bd7c3c&creativeASIN=B08BRNL95V",
+    description:
+      "HAWINK Tattoo Machine Pen Kit Máquina rotativa de tatuaje con fuente de alimentación inalámbrica para tatuaje...",
+    title:
+      "HAWINK Tattoo Machine Pen Kit Máquina rotativa de tatuaje con fuente de alimentación inalámbrica para tatuaje 20 piezas Cartucho de agujas de tatuaje Cinta de agarre de tatuaje negro EM136P199RCAY20-1",
+    price: "EUR 59,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/416+CR5doHL._AC_AC_SR98,95_.jpg",
+  },
+];
+
+const mejoreskitsPrincipiantesProps = [
+  {
+    href: "https://www.amazon.es/dp/B09LCFMWKQ/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=104492564b759e62c3a464b208f7faba&creativeASIN=B09LCFMWKQ",
+    description:
+      "Unihuby Kit de Máquina para Principiantes, 2 Energía Inalámbrica 40 Cartuchos Máquina Rotativa...",
+    title:
+      "Unihuby Kit de Máquina para Principiantes, 2 Energía Inalámbrica 40 Cartuchos Máquina Rotativa Pen Transferpapier Piel Sintetica",
+    price: "EUR 169,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/514bMdV80PL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B0B73S7ZQB/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=1dfed13b7ce98990195ac901f152b557&creativeASIN=B0B73S7ZQB",
+    description:
+      "STIGMA Kit con Bateria Completo Maquina Rotativa 50pcs Cartuchos de Agujas y Tintas Colores Kit Inalám...",
+    title:
+      "STIGMA Kit con Bateria Completo Maquina Rotativa 50pcs Cartuchos de Agujas y Tintas Colores Kit Inalámbrica Wireless P29-1",
+    price: "EUR 89,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51M8DTKP3XL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B09DXYMZT5/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=bf64b837613fa5baa08798aba8839f91&creativeASIN=B09DXYMZT5",
+    description:
+      "STIGMA Kit de Tatuaje Completo Máquina de Tatuaje Rotativa con 20 Cartuchos de Tatuaje Premium Juego...",
+    title:
+      "STIGMA Kit de Tatuaje Completo Máquina de Tatuaje Rotativa con 20 Cartuchos de Tatuaje Premium Juego de Tinta de 7 Colores Accesorios de Tatuaje EM123KITP162-1",
+    price: "EUR 92,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51tVA+W3WxL._AC_AC_SR98,95_.jpg",
+  },
+
+  {
+    href: "https://www.amazon.es/dp/B081VBDQTC/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=d5df89dbb6e09010bc93dd82fbfec336&creativeASIN=B081VBDQTC",
+    description:
+      "HAWINK Rotary Tattoo Machine Pen Kit 20pcs Cartuchos de tatuaje Fuente de alimentación digital 1 Tinta...",
+    title:
+      "HAWINK Rotary Tattoo Machine Pen Kit 20pcs Cartuchos de tatuaje Fuente de alimentación digital 1 Tinta verdadera del tatuaje Cubiertas desechables Agarre Vendaje Caja de aleación de aluminio EKCNCQ5-1",
+    price: "EUR 79,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51LGpMz0E4L._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B09L4RH1F4/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=db7099da7dd991cf427d90014a787640&creativeASIN=B09L4RH1F4",
+    description:
+      "TATOOINE Kit de Tatuaje Completo para Principiantes Kit de Máquina de Tatuaje Fuente de Alimentación de...",
+    title:
+      "TATOOINE Kit de Tatuaje Completo para Principiantes Kit de Máquina de Tatuaje Fuente de Alimentación de Tatuaje con Pedal 14pcs Tintas de Color de 5ML, Kit de 20pcs Agujas para Tetuaje Profesional Kit",
+    price: "EUR 79,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51I7UEuGbVL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B09VBPX6KN/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=6acee98af9f828970b741e8cd44f1e3d&creativeASIN=B09VBPX6KN",
+    description:
+      "TATELF Kit de tatuaje inalámbrica máquina de tatuaje rotativa con 2 fuente de alimentación de tatuaje 20...",
+    title:
+      "TATELF Kit de tatuaje inalámbrica máquina de tatuaje rotativa con 2 fuente de alimentación de tatuaje 20 cartuchos agujas de tatuaje tazas de tinta para principiantes tatuadores",
+    price: "EUR 128,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/41cCIlYlZLL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B08H22W1HN/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=fb96fa8f4d22dbd6f89522a3997b6600&creativeASIN=B08H22W1HN",
+    description:
+      "Solong Tattoo Kit Ametralladora rotativa inalámbrica para tatuar conectada RCA - Dispositivo profesional...",
+    title:
+      "Solong Tattoo Kit Ametralladora rotativa inalámbrica para tatuar conectada RCA - Dispositivo profesional para tatuador - EK138",
+    price: "EUR 223,98",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51bl3Wp1vFL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B09DY28Z5R/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=1e8b5ac0e6384d545f69aa996a3ecd2c&creativeASIN=B09DY28Z5R",
+    description:
+      "STIGMA Kit de Tatuaje Profesional Máquina de Tatuaje Rotativa Fuente de Alimentación de Tatuaje Digital...",
+    title:
+      "STIGMA Kit de Tatuaje Profesional Máquina de Tatuaje Rotativa Fuente de Alimentación de Tatuaje Digital 7 Colores de Tatuaje con Estuche de Tatuaje EM122KIT02BP142-1",
+    price: "EUR 89,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51QVwuL7IAL._AC_AC_SR98,95_.jpg",
+  },
+];
 
 const pageIndexProps = [
   {
@@ -33,42 +191,108 @@ const pageIndexProps = [
         <div>
           <h1
             id="maquina-de-bobina"
-            class="text-almost-black text-5xl lg:text-[4rem] lg:leading-[5rem] font-bold text-center mt-4"
+            class="text-almost-black text-5xl lg:text-[4rem] lg:leading-[5rem] font-bold text-center mt-4 mb-6"
           >
-            Kit tatuaje principiantes
+            Kit de Máquinas de tatuar para principiantes
           </h1>
           <p class="pt-5 lg:pt-[2rem] text-xl">
-            Tal como existen varios tipos de máquinas de tatuar; existen un sin
-            número de marcas de distintas gamas, precios, materiales, usos, etc.
-            A lo anterior hay que sumarle el hecho de que la elección sobre qué
-            máquina de tatuar usar es subjetiva y depende en gran medida del
-            gusto personal del tatuador.
+            ¿Empezando con los tatuajes?. Seguramente tienes un muchas preguntas
+            al respecto
           </p>
           <p class="pt-5 lg:pt-[2rem] text-xl">
-            Tal cantidad de variables puede abrumar a los tatuadores, sobre todo
-            a los que comienzan en este campo, a la hora de comprar su primera
-            máquina o de tener que renovar la que ya tenían.
+            Algunas cosas a tener en cuenta son el <strong
+              >precio, cuánto tiempo se usará y en qué tipo de tatuajes se
+              trabajará</strong
+            >.
+          </p>
+          <p class="pt-5 lg:pt-[2rem] text-xl mb-5">
+            En el mundo de las máquinas de tatuar, tienes muchas opciones a
+            considerar. Desde varias máquinas hasta diferentes modelos al mismo
+            precio, también existen los <strong
+              >kit de tatuajes para principiantes</strong
+            >, donde encontrarás todo lo necesario para comenzar tu camino como
+            tatuador. Puede ser difícil tomar una decisión sobre qué máquina es
+            la adecuada para ti pero en este post mostraremos las <strong
+              >máquinas más utilizada por los que se inician en el mundo del
+              tatuaje</strong
+            >.
+          </p>
+          <br />
+          <h2
+            id="tipos-maquinas-de-tatuar"
+            class="text-black text-3xl text-center mt-6 border-b-2 border-b-gray-400 pb-2"
+          >
+            ¿Qué máquina se recomienda para empezar a tatuar?
+          </h2>
+          <p class="pt-5 lg:pt-[2rem] text-xl">
+            Si recién está comenzando a tatuar y espera comprar su primera
+            máquina, es importante que compre una <strong
+              >máquina para principiantes</strong
+            >. Es mejor comenzar con un modelo más asequible y menos costoso y
+            administrarlo a medida que avanza en lugar de comprar una máquina
+            costosa de nivel profesional desde el principio y arriesgarse a
+            dañarla.
           </p>
           <p class="pt-5 lg:pt-[2rem] text-xl">
-            En respuesta, los fabricantes han creado kits "ready to use" para
-            poder comenzar a tatuar desde el momento abres el kit.
+            para esto, la mejor opción es una <a
+              class="underline cursor-pointer hover:text-almost-black"
+              >máquina de tatuar rotativa</a
+            >. Por su peso y facilidad de uso, merece la pena adquirirlo a bajo
+            precio y su fácil uso.
+          </p>
+
+          <p class="pt-5 lg:pt-[2rem] text-xl">
+            Una ventaja que ofrece a quienes tienen poco presupuesto o recién
+            comienzan es su <strong>precio y menor mantenimiento</strong>.
           </p>
           <p class="pt-5 lg:pt-[2rem] text-xl">
-            Existen kits de distintas gamas y precios y son muy convenientes
-            para poder probar distintos tipos de maquinas y accesorios antes de
-            dar con la que escogerás para tu práctica habitual.
+            Siempre hay que tener en cuenta el peso de la <strong
+              >máquina de tatuar</strong
+            >, es importante cuando se necesita usar durante largos períodos de
+            tiempo. Si sus muñecas y antebrazos no son lo suficientemente
+            fuertes, puede comenzar a sentir molestias mientras usa la máquina y
+            eventualmente dejar de trabajar.
           </p>
           <p class="pt-5 lg:pt-[2rem] text-xl">
-            Los kits para principiantes suelen incorporar trozos de piel
-            sintéticos, hechos de silicona, para poder practicar distintos
-            diseños en un lienzo plano y puedas acostumbrarte a tu nueva
-            máquina.
+            A continuación mostraremos algunos kits que pueden ser catalogados
+            como el <strong>mejor kit de tatuaje para principiantes</strong>
+          </p>
+          <div
+            class="flex flex-row justify-center flex-wrap lg:flex lg:flex-row lg:flex-wrap space-x-2 mb-5"
+          >
+            {
+              mejoreskitsPrincipiantesProps.map((article) => (
+                <ArticleCard articleProps={article} />
+              ))
+            }
+          </div>
+
+          <h2
+            id="tipos-maquinas-de-tatuar"
+            class="text-black text-3xl text-center mt-6 border-b-2 border-b-gray-400 pb-2"
+          >
+            Kit máquina de tatuar barata para principiantes
+          </h2>
+          <p class="pt-5 lg:pt-[2rem] text-xl">
+            Si bien estos kits son mas baratos que los anteriores, son una muy
+            buena opcion para dar los primeros pasos con los tatuajes y traen
+            todo lo necesario para llegar y tatuar.
           </p>
           <p class="pt-5 lg:pt-[2rem] text-xl">
-            También existen partes del cuerpo sintéticas para practicar de forma
-            mas realista. Este tipo de modelos para práctica son altamente
-            recomendados ya que simulan de buena forma un ambiente real.
+            Por otro lado aún cuando las <strong>máquinas tipo pen</strong> son las
+            más comodas para principiantes, aquí también te ofrecemos kits con <strong
+              >máquinas de tatuar rotativa</strong
+            >s tradicionales.
           </p>
+          <div
+            class="flex flex-row justify-center flex-wrap lg:flex lg:flex-row lg:flex-wrap space-x-2 mb-5 mt-6"
+          >
+            {
+              kitsPrincipiantesBaratosProps.map((article) => (
+                <ArticleCard articleProps={article} />
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>
