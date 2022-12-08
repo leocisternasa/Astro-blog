@@ -261,7 +261,7 @@ export default function Example() {
             <div className="space-y-6 py-6 px-5">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <a
-                  href="#"
+                  href="/kit-tatuaje-principiante"
                   className="text-lg font-medium text-gray-900 hover:text-gray-700"
                 >
                   Kit tatuaje principiante
