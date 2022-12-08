@@ -3,14 +3,76 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import PageIndex from "../components/PageIndex.astro";
 import BackToIndexButton from "../components/BackToIndexButton.astro";
+import ArticleCard from "../components/ArticleCard.astro";
 
-const pageIndexProps = [
+const mauqinasCheyenneProps = [
   {
-    seccionTitle: "Marcas Máquinas de tatuar",
-    seccionTitleLink: "#marcas-maquinas-tatuar",
-    subSeccions: [
-      { title: "Maquinas de tatuar Cheyenne", link: "#marca-cheyenne" },
-    ],
+    href: "https://www.amazon.com/dp/B079QLSGLR/ref=as_sl_pc_as_ss_li_til?tag=maquinasdet0d-20&linkCode=w00&linkId=51e780572688a3030a274c8fe2bae1b8&creativeASIN=B079QLSGLR",
+    description:
+      "Cheyenne Hawk Pen, Tattoo Pen for Precise Designs, Tattooing Machine Perfect for both Lining and Shading, Red",
+    title:
+      "Cheyenne Hawk Pen, Tattoo Pen for Precise Designs, Tattooing Machine Perfect for both Lining and Shading, Red",
+    price: "EUR 759,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/31t2JwaR8TL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.com/dp/B079QQVLXJ/ref=as_sl_pc_as_ss_li_til?tag=maquinasdet0d-20&linkCode=w00&linkId=1103013188631c9a3625656349825a1a&creativeASIN=B079QQVLXJ",
+    description:
+      "Cheyenne Hawk Pen, Tattoo Pen for Precise Designs, Tattooing Machine Perfect for both Lining and Shading, Black",
+    title:
+      "Cheyenne Hawk Pen, Tattoo Pen for Precise Designs, Tattooing Machine Perfect for both Lining and Shading, Black",
+    price: "EUR 759,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/21-ecGKFi7L._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.com/dp/B079QJ1VM1/ref=as_sl_pc_as_ss_li_til?tag=maquinasdet0d-20&linkCode=w00&linkId=a99dbb31650456b4967909b8aafdc1bf&creativeASIN=B079QJ1VM1",
+    description:
+      "Cheyenne Hawk Pen, Tattoo Pen for Precise Designs, Tattooing Machine Perfect for both Lining and Shading, Purple",
+    title:
+      "Cheyenne Hawk Pen, Tattoo Pen for Precise Designs, Tattooing Machine Perfect for both Lining and Shading, Purple",
+    price: "EUR 759,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/31BGaOnRyzL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.com/dp/B079QLWRTL/ref=as_sl_pc_as_ss_li_til?tag=maquinasdet0d-20&linkCode=w00&linkId=ace25bb57bc2059e1902f2c9d01348e1&creativeASIN=B079QLWRTL",
+    description:
+      "Cheyenne Hawk Pen, Tattoo Pen for Precise Designs, Tattooing Machine Perfect for both Lining and Shading, Orange",
+    title:
+      "Cheyenne Hawk Pen, Tattoo Pen for Precise Designs, Tattooing Machine Perfect for both Lining and Shading, Orange",
+    price: "EUR 759,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/31gTtM133kL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.com/dp/B08SL3NMZQ/ref=as_sl_pc_as_ss_li_til?tag=maquinasdet0d-20&linkCode=w00&linkId=e468807c4040f45920411baeca2fcffe&creativeASIN=B08SL3NMZQ",
+    description:
+      "Cheyenne Sol Nova Unlimited Cordless Tattoo Machine — 3.5mm Black",
+    title: "Cheyenne Sol Nova Unlimited Cordless Tattoo Machine — 3.5mm Black",
+    price: "EUR 1,341.99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/31XfYw2K3lL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.com/dp/B08SL5L9VM/ref=as_sl_pc_as_ss_li_til?tag=maquinasdet0d-20&linkCode=w00&linkId=91f7b43ded38fcd01e02eaa13fa522d6&creativeASIN=B08SL5L9VM",
+    description:
+      "Cheyenne Sol Nova Unlimited Cordless Tattoo Machine — 4.0mm Black",
+    title: "Cheyenne Sol Nova Unlimited Cordless Tattoo Machine — 4.0mm Black",
+    price: "EUR 1,341.99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/31vI8LsVoxL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.com/dp/B0B2BQ3FDY/ref=as_sl_pc_as_ss_li_til?tag=maquinasdet0d-20&linkCode=w00&linkId=46cd5cbbf755f874612aa9101f763fbd&creativeASIN=B0B2BQ3FDY",
+    description:
+      "Cheyenne Hawk Unio Tattoo Pen, All in 1 Tattooing Machine , Adjustable...",
+    title:
+      "Cheyenne Hawk Unio Tattoo Pen, All in 1 Tattooing Machine, Adjustable Stroke, Professional For All Types of Lines and Shading, Black",
+    price: "EUR 1,018.99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/21VJqwSpLKL._AC_AC_SR98,95_.jpg",
   },
 ];
 ---
@@ -23,36 +85,43 @@ const pageIndexProps = [
         class="text-almost-black text-5xl lg:text-[4rem] lg:leading-[5rem] font-bold text-center mt-4"
       >
         Maquinas de tatuar Cheyenne
-      </h1><br /><br />
+      </h1>
 
-      <PageIndex seccions={pageIndexProps} />
       <div class="flex flex-col lg:flex lg:flex-row items-center relative z-0">
         <div>
           <p class="pt-5 lg:pt-[2rem] text-xl">
-            Cheyenne es una empresa fabricante de maquinas de tatuajes lider en
-            el mercado. Desde el 2006 crean maquinas que se caracterizan por su
-            calidad, seguridad e innovación. La fábrica se ubica en Alemania y
-            cumplen con los mas altos estándares médicos.
+            <strong>Cheyenne</strong> es una empresa fabricante de maquinas de tatuajes
+            lider en el mercado. Desde el 2006 crean maquinas que se caracterizan
+            por su calidad, seguridad e innovación. Sa fábrica se ubica en Berlín,
+            Alemania y cumplen con los mas altos estándares médicos mas altos de
+            Europa.
           </p>
           <p class="pt-5 lg:pt-[2rem] text-xl">
-            Pioneros en el desarrollo de maquinas de tatuar pen, su slogan es
-            "Hecho para artistas".
+            Pioneros en el desarrollo de <a
+              class="underline cursor-pointer hover:text-almost-black font-semibold"
+              href="/maquina-de-tatuar-pen">maquinas de tatuar pen</a
+            >, su slogan es "Hecho para artistas".
           </p>
-          <div class="flex justify-center mt-8 mb-6">
+          <div class="flex justify-center mt-8 mb-6 space-x-7">
             <img
-              class="block object-scale-down rounded"
+              class="block object-scale-down rounded w-[300px]"
               src="/images/maquina-de-tatuar-cheyenne.webp"
               alt="Hero"
             />
           </div>
           <p class="pt-5 lg:pt-[2rem] text-xl">
-            También existen alternativas a esta marca que son un tanto menos
-            costosas pero igualmente muy buenas opcion si hablamos de
-            costo/beneficio, durabilidad y calidad.
+            Tatuar con maquinas cheyenne es trabajar con herramientas de
+            vanguardia, calidad, estética y funcionalidad tope de línea.
           </p>
-          <h1 class="text-3xl text-center pt-5">
-            Aqui van las ofertas de amazon
-          </h1>
+          <div
+            class="flex flex-row justify-center flex-wrap lg:flex lg:flex-row lg:flex-wrap space-x-2 mb-5 mt-5"
+          >
+            {
+              mauqinasCheyenneProps.map((article) => (
+                <ArticleCard articleProps={article} />
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>
