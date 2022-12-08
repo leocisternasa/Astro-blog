@@ -3,6 +3,183 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import PageIndex from "../components/PageIndex.astro";
 import BackToIndexButton from "../components/BackToIndexButton.astro";
+import ArticleCard from "../components/ArticleCard.astro";
+
+const dragonhawkBobinasProps = [
+  {
+    href: "https://www.amazon.es/dp/B00IU7P7IU/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=7e73286b8b9012ac541acdbbc485a4fc&creativeASIN=B00IU7P7IU",
+    description:
+      "Kit de tatuaje para principiantes, 25 colores de tinta, dos pistolas, D100-2EUYMX ...",
+    title:
+      "Kit de tatuaje para principiantes, 25 colores de tinta, dos pistolas, D100-2EUYMX",
+    price: "EUR 52.99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51UM7sR5xEL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B01EQTAX6Q/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=92c9b0f6da3de90717ad51752629e191&creativeASIN=B01EQTAX6Q",
+    description:
+      "Dragonhawk 2 Brass Tattoo Machine Straight Shader Circle Liner with 2 Grips WQ3028...",
+    title:
+      "Dragonhawk 2 Brass Tattoo Machine Straight Shader Circle Liner with 2 Grips WQ3028+WQ3029",
+    price: "EUR 57.00",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/41kC11KdeHL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B09LM4DYHC/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=f23499b0168a84a318d8343bd62a961b&creativeASIN=B09LM4DYHC",
+    description:
+      "Dragonhawk - Kit de tatuaje (2 unidades, con cartuchos de macropina WJX) complete...",
+    title:
+      "Dragonhawk - Kit de tatuaje (2 unidades, con cartuchos de macropina WJX)",
+    price: "EUR 69.90",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51KNlEXK9fL._AC_AC_SR98,95_.jpg",
+  },
+];
+
+const dragonhawkArticleProps = [
+  {
+    href: "https://www.amazon.es/dp/B08B7ZMCNW/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=7c23b002579f782fce10d6f8b01cbb11&creativeASIN=B08B7ZMCNW",
+    description:
+      "Mast Wireless Battery Tattoo Machine Pen LCD Display Rotary Tattoo Pen with 2 Grips (rojo)...",
+    title:
+      "Mast Wireless Battery Tattoo Machine Pen LCD Display Rotary Tattoo Pen with 2 Grips (rojo)",
+    price: "EUR 179.00",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/41ZtbJZl0+L._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B09MHBQ36D/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=a52beb673d12dc0a106d9633899f9321&creativeASIN=B09MHBQ36D",
+    description:
+      "Dragonhawk Fold Maquina de tatuar Pen Tattoo Pen Machine Rotary Tattoo Gun Strokes...",
+    title:
+      "Dragonhawk Fold Maquina de tatuar Pen Tattoo Pen Machine Rotary Tattoo Gun Strokes Length 2.4mm-4.2mm Changeable Custom Coreless Motor RCA cable for Tattoo Artists",
+    price: "EUR 189.00",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/31Enalt8RaL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B076Q5RZNQ/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=4f6379b78160e72623a7cf8b03642505&creativeASIN=B076Q5RZNQ",
+    description:
+      "Dragonhawk Mast Pen Rotary Tattoo Machine Space Aluminum for Tattoo Artists (WQ102-2)...",
+    title:
+      "Dragonhawk Mast Pen Rotary Tattoo Machine Space Aluminum for Tattoo Artists (WQ102-2)",
+    price: "EUR 75.00",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/31NLZHtSjCL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B09C5TG96G/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=0b8436cd63ada24716cbcde1afb6fab7&creativeASIN=B09C5TG96G",
+    description:
+      "Dragonhawk Wireless Tattoo Pen Rotary Tattoo Machine Gun Battery Pen Coreless Motor Bat...",
+    title:
+      "Dragonhawk Wireless Tattoo Pen Rotary Tattoo Machine Gun Battery Pen Coreless Motor Battery Power Supply (verde)",
+    price: "EUR 167.00",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/31JjIsn38+L._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B07DK45SRP/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=27a4cf777cb97a0f07094968b7f9b3f6&creativeASIN=B07DK45SRP",
+    description:
+      "Dragonhawk Mast Pen Rotary Tattoo Machine Power Supply Sea Needles Foot Pedal Gift Box...",
+    title:
+      "Dragonhawk Mast Pen Rotary Tattoo Machine Power Supply Sea Needles Foot Pedal Gift Box DML-7",
+    price: "EUR 129.00",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51uiTblIEUL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B07CGHF8TL/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=a320dc76878b57bca9aebcb831a50f19&creativeASIN=B07CGHF8TL",
+    description:
+      "Dragonhawk Cartridge Tattoo Machine Kit Pen Rotary Tattoo Machine Cartridge...",
+    title:
+      "Dragonhawk Cartridge Tattoo Machine Kit Pen Rotary Tattoo Machine Cartridge Needles Power Supply for Tattoo Artists DML-5",
+    price: "EUR 119.00",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51q5s9t0cDL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B07F28NRRH/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=a9baadc26b4cbc56fa8ca1b41db3d167&creativeASIN=B07F28NRRH",
+    description:
+      "Dragonhawk Tattoo Kit Rotary Tattoo Machine Pen Power Supply Tattoo Needles Foot Pedal...",
+    title:
+      "Dragonhawk Tattoo Kit Rotary Tattoo Machine Pen Power Supply Tattoo Needles Foot Pedal Tattoo Supply BJT-333",
+    price: "EUR 109.00",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51z-oyAh5IL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B07PLPXPML/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=abca7dfddc2aee159bbece290ada5522&creativeASIN=B07PLPXPML",
+    description:
+      "Dragonhawk Kit de tatuaje Máquina Pen de Tatuaje Rotativa Tattoo Machine Pen tatuaje Fuente de...",
+    title:
+      "Dragonhawk Kit de tatuaje Máquina Pen de Tatuaje Rotativa Tattoo Machine Pen tatuaje Fuente de alimentación de tatuaje Agujas de pluma Tintas de tatuaje Maquinas Tattoo Kit Professional",
+    price: "EUR 129.00",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51DI51f6VkL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B07JVQM86Y/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=e42b22eb10a07c0b9033b24ebb50416f&creativeASIN=B07JVQM86Y",
+    description:
+      "Dragonhawk Mast S2 - Fuente de alimentación para máquina de tatuaje, 5 cajas de 50 cartuchos...",
+    title:
+      "Dragonhawk Mast S2 - Fuente de alimentación para máquina de tatuaje, 5 cajas de 50 cartuchos (mástil S2 máquina)",
+    price: "EUR 237.40",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/512RYWDDQGL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B094FZ4DDL/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=9a62e744b27d59e0132bcaa156e752c9&creativeASIN=B094FZ4DDL",
+    description:
+      "Mast Wireless Tattoo Kit Rotary Tattoo Machine Pen Battery Wireless Power Supply Tattoo Need...",
+    title:
+      "Mast Wireless Tattoo Kit Rotary Tattoo Machine Pen Battery Wireless Power Supply Tattoo Needles Tattoo Supply",
+    price: "EUR 169.00",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51H6uHgNXxL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B07GCKX453/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=435025193c53743063636fd9dbc2f3bc&creativeASIN=B07GCKX453",
+    description:
+      "Extreme Mast Sai Tattoo Kit Tattoo Machine Pen 3.2mm and 3.7mm Stroke Length Adjustable Soft...",
+    title:
+      "Extreme Mast Sai Tattoo Kit Tattoo Machine Pen 3.2mm and 3.7mm Stroke Length Adjustable Soft and Hard Power Supply Cartridges Tattoo Needle for Tattoo Artist",
+    price: "EUR 128.90",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51D90VwhnPL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B0B1795PHP/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=1f56ae23181cb538a9518c0d803f4629&creativeASIN=B0B1795PHP",
+    description:
+      "Dragonhawk Complete Tattoo Pen Kit Rotary Machine Gun Wireless Battery Power Supply 20Pcs Car...",
+    title:
+      "Dragonhawk Complete Tattoo Pen Kit Rotary Machine Gun Wireless Battery Power Supply 20Pcs Cartridges Needles Tattoo Inks for Beginner Tattoo Artists",
+    price: "EUR 119.00",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/510lMp6koeL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B00SF1GJEW/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=a58ee8be5f77edd749ac7fc099cd01bb&creativeASIN=B00SF1GJEW",
+    description:
+      "Dragonhawk Extreme V2 Tattoo Kit 2 Rotary Machines Motor Gun Power Supply Di...",
+    title:
+      "Dragonhawk Extreme V2 Tattoo Kit 2 Rotary Machines Motor Gun Power Supply Disposable Needles Tips for Tattoo Artist MDJT-1",
+    price: "EUR 95.90",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51zTNr7xhML._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B01HNLD8MU/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=742848772a3af69ef4c4ad1617e4d481&creativeASIN=B01HNLD8MU",
+    description:
+      "Dragonhawk Rotary Tattoo Machine Space Aluminum Machine Coloring (MDJ-JC-7) ...",
+    title:
+      "Dragonhawk Rotary Tattoo Machine Space Aluminum Machine Coloring (MDJ-JC-7)",
+    price: "EUR 68.00",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51eKtbUHeTL._AC_AC_SR98,95_.jpg",
+  },
+];
 
 const pageIndexProps = [
   {
@@ -25,35 +202,67 @@ const pageIndexProps = [
         Maquinas de tatuar DragonHawk
       </h1><br /><br />
 
-      <PageIndex seccions={pageIndexProps} />
-
       <div class="flex flex-col lg:flex lg:flex-row items-center relative z-0">
         <div>
-          <h2
-            id="dragonhawk"
-            class="text-almost-black text-3xl lg:text-[3rem] lg:leading-[5rem] font-bold text-center mt-4"
-          >
-            Maquinas de tatuar DragonHawk
-          </h2>
           <p class="pt-5 lg:pt-[2rem] text-xl">
-            DragonHawk es una marca china muy reconocida por la calidad de sus
-            maquinas de tatuar. Tienen excelente post-venta y usar sus máquinas
-            es garantía de calidad
+            <strong>DragonHawk</strong> es una prestigiosa marca que fabrica productos
+            que cumplen con estándares de calidad internacionales y que es muy apreciada
+            en una gran variedad de países. Su producto principal son las <strong
+              >maquinas de tatuar</strong
+            >, agujas y accesorios.
+          </p>
+          <p class="pt-5 lg:pt-[2rem] text-xl">
+            Su fabrica se ubica en Guangdong, China. Tienen excelente post-venta
+            y usar sus máquinas es garantía de calidad
           </p>
 
           <div class="flex justify-center mt-8 mb-6">
             <img
-              class="block object-scale-down rounded"
+              class="block object-scale-down rounded w-[300px]"
               src="/images/dragonhawk-maquina.webp"
               alt="Hero"
             />
           </div>
           <p class="pt-5 lg:pt-[2rem] text-xl">
-            Estas son las mejores ofertas de esta marca:
+            En su catálogo tiene disponible todo tipo de máquinas de tatuar ya
+            sea <a
+              href="/maquina-rotativa"
+              class="underline font-semibold cursor-pointer hover:text-almost-black"
+              >rotativas</a
+            >, tradicionales y <a
+              href="/maquina-de-tatuar-pen"
+              class="underline font-semibold cursor-pointer hover:text-almost-black"
+              >máquinas tipo pen</a
+            >, o de <a
+              href="/maquina-de-bobinas"
+              class="underline cursor-pointer font-semibold hover:text-almost-black"
+              >bobinas</a
+            > así como también numeroso y convenientes kits.
           </p>
-          <h1 class="text-3xl text-center pt-5">
-            Aqui van las ofertas de amazon
-          </h1>
+          <div
+            class="flex flex-row justify-center flex-wrap lg:flex lg:flex-row lg:flex-wrap space-x-2 mb-5 mt-5"
+          >
+            {
+              dragonhawkArticleProps.map((article) => (
+                <ArticleCard articleProps={article} />
+              ))
+            }
+          </div>
+          <h2
+            id="tipos-maquinas-de-tatuar"
+            class="text-black text-3xl text-center mt-6 border-b-2 border-b-gray-400 pb-2"
+          >
+            Máquinas de tatuar DragonHawk de bobinas
+          </h2>
+          <div
+            class="flex flex-row justify-center flex-wrap lg:flex lg:flex-row lg:flex-wrap space-x-2 mb-5 mt-5"
+          >
+            {
+              dragonhawkBobinasProps.map((article) => (
+                <ArticleCard articleProps={article} />
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>

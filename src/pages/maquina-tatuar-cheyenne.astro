@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import PageIndex from "../components/PageIndex.astro";
 import BackToIndexButton from "../components/BackToIndexButton.astro";
 import ArticleCard from "../components/ArticleCard.astro";
+import AmazoneUSArticle from "../components/AmazoneUSArticle.astro";
 
 const mauqinasCheyenneProps = [
   {
@@ -117,7 +118,7 @@ const mauqinasCheyenneProps = [
           >
             {
               mauqinasCheyenneProps.map((article) => (
-                <ArticleCard articleProps={article} />
+                <AmazoneUSArticle articleProps={article} />
               ))
             }
           </div>
