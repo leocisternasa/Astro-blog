@@ -39,7 +39,7 @@ const marcas = [
     name: "Cheyenne",
     description:
       "Get all of your questions answered in our forums or contact support.",
-    href: "maquina-tatuar-cheyenne",
+    href: "/maquina-tatuar-cheyenne",
     icon: LifebuoyIcon,
   },
   {
