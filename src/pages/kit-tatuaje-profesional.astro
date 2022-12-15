@@ -3,20 +3,31 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import PageIndex from "../components/PageIndex.astro";
 import BackToIndexButton from "../components/BackToIndexButton.astro";
+import ArticleCard from "../components/ArticleCard.astro";
 
 const mejoreskitsPrincipiantesProps = [
   {
-    href: "https://www.amazon.es/dp/B09PV295YJ/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=6f79d0289bc31360c96543fbf51f7085&creativeASIN=B09PV295YJ",
+    href: "https://www.amazon.es/dp/B00KMR2GVW/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=bf68d9a20920be6545f57a593db2e771&creativeASIN=B00KMR2GVW",
     description:
-      "STIGMA Kit para Tatuar con Bateria 95mm Maquina de Tatuaje Profesional 20pcs Agujas de Tatuaje Tinta...",
+      "Dragonhawk Profesional Kit de Tatuaje Completo Maquina de Tatuaje Rotativa + Maquina Bobinas...",
     title:
-      "STIGMA Kit para Tatuar con Bateria 95mm Maquina de Tatuaje Profesional 20pcs Agujas de Tatuaje Tinta Negra STE10KIT02B-1",
-    price: "EUR 149,99",
+      "Dragonhawk Profesional Kit de Tatuaje Completo Maquina de Tatuaje Rotativa Tattoo Kit Agujas Fuente de Alimentacion Pedal de pie",
+    price: "EUR 75,00",
     imgSrc:
-      "https://m.media-amazon.com/images/I/51hEXkC9v3L._AC_AC_SR98,95_.jpg",
+      "https://m.media-amazon.com/images/I/51K91Nv5F0L._AC_AC_SR98,95_.jpg",
   },
   {
-    href: "https://www.amazon.es/dp/B08Y896DK4/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=2ab0f271930a244133bef2bdbade528f&creativeASIN=B08Y896DK4",
+    href: "https://www.amazon.es/dp/B09J9ZK68Q/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=64b3a18271e4a03e2427340bfb928827&creativeASIN=B09J9ZK68Q",
+    description:
+      "Kit de pluma de tatuaje HAWINK M¨¢quina de pistola giratoria con fuente de alimentaci¨®n de tatuaje...",
+    title:
+      "Kit de pluma de tatuaje HAWINK M¨¢quina de pistola giratoria con fuente de alimentaci¨®n de tatuaje inal¨¢mbrica 20 piezas Patrone 7 Tinten EM154EN02P199-1",
+    price: "EUR 130,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51VWuo9nzXL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B08Y896DK4/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=0797fde28d566f37afe98b63c68edfe9&creativeASIN=B08Y896DK4",
     description:
       "TATELF Kit tatuaje completo Kit de máquinas de tatuaje giratorias profesionales con 2 motores, fuente...",
     title:
@@ -24,6 +35,86 @@ const mejoreskitsPrincipiantesProps = [
     price: "EUR 130,99",
     imgSrc:
       "https://m.media-amazon.com/images/I/51t3STFWcBL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B09PMMS3GK/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=832a8be99db4052bf4963d14a8a55488&creativeASIN=B09PMMS3GK",
+    description:
+      "Solong Tattoo Pen Kit Rotary Gun Tattoo Machine Kit completo de tatuaje profesional con 20 piezas Cartuchos...",
+    title:
+      "Solong Tattoo Pen Kit Rotary Gun Tattoo Machine Kit completo de tatuaje profesional con 20 piezas Cartucho Agujas Tattoo Power Supply 7 Tinta de tatuaje para tatuadores SLP1KITP162-1-EU",
+    price: "EUR 130,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/5126eW7i2ML._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B088FHK4ZC/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=54ad79980760384bf9498336461ef419&creativeASIN=B088FHK4ZC",
+    description:
+      "Solong Kit Tatuaje Máquina Tatuar - RCA Maquina de Tatuar Kit Completo Para Pluma de Tatuaje Motor Completo...",
+    title:
+      "Solong Kit Tatuaje Máquina Tatuar - RCA Maquina de Tatuar Kit Completo Para Pluma de Tatuaje Motor Completo de 10000 rpm Motor de Tatuaje Fuerte y Estable EK118A-7 (Verde oscuro)",
+    price: "EUR 129,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51fVV7YPidL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B07GN4LN1Z/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=de373047960af531d7f8582b5b47df3c&creativeASIN=B07GN4LN1Z",
+    description:
+      "STIGMA Profesional Kit de Tatuaje Completo Maquina para Tatuar Tattoo Kit Maquina de Tatuaje 1 Maquina Negra...",
+    title:
+      "STIGMA Profesional Kit de Tatuaje Completo Maquina para Tatuar Tattoo Kit Maquina de Tatuaje 1 Maquina Negra 5 Tintas 20 Agujas Fuente de Alimentacion Pedal",
+    price: "EUR 69,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/512OegxU3VL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B07NKMX61K/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=2b569ca53a763c5f5767a98d5c767f1f&creativeASIN=B07NKMX61K",
+    description:
+      "Solong Tattoo Kit de Tatuaje Completo 4 Maquina de Tatuaje 54 Tintas Fuente de Alimentacion Pedal Agujas Grips...",
+    title:
+      "Solong Tattoo Kit de Tatuaje Completo 4 Maquina de Tatuaje 54 Tintas Fuente de Alimentacion Pedal Agujas Grips Consejos TK453",
+    price: "EUR 90,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/611p9zVFtcL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B07JK9V7G2/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=3ce5b42f6375913ddc5539a3a4901b5f&creativeASIN=B07JK9V7G2",
+    description:
+      "Stigma Bobina Maquina Kit para Tatuaje Profesional Ametralladora de Tatuaje Fuente de Alimentacion Pedal 7 Tintas...",
+    title:
+      "Stigma Bobina Maquina Kit para Tatuaje Profesional Ametralladora de Tatuaje Fuente de Alimentacion Pedal 7 Tintas Grips Agujas TK-ST202",
+    price: "EUR 49,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51Gf6bkxc+L._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B096NB9436/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=3ee809f497e6d771a6ba99a76e802878&creativeASIN=B096NB9436",
+    description:
+      "Mast Tattoo Machine Set Mast Flip Wireless Tattoo Pen Maschine Wireless Battery Power Supply RCA Jack Tattoo Needles...",
+    title:
+      "Mast Tattoo Machine Set Mast Flip Wireless Tattoo Pen Maschine Wireless Battery Power Supply RCA Jack Tattoo Needles",
+    price: "EUR 198,00",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51m6mNz9lWL._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B09JG5P5SX/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=5adb77e6151495937a8466534c7d2eeb&creativeASIN=B09JG5P5SX",
+    description:
+      "Máquina de tatuaje inalámbrica HAWINK Kit de pluma rotativa 20 piezas Cartucho de agujas de tatuaje Cinta de agarre...",
+    title:
+      "Máquina de tatuaje inalámbrica HAWINK Kit de pluma rotativa 20 piezas Cartucho de agujas de tatuaje Cinta de agarre para tatuaje Envoltura con maleta EM155P199RCAEN02-7",
+    price: "EUR 69,99",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51thqGRwq3L._AC_AC_SR98,95_.jpg",
+  },
+  {
+    href: "https://www.amazon.es/dp/B07PLPXPML/ref=as_sl_pc_as_ss_li_til?tag=productosr071-21&linkCode=w00&linkId=d64c06f8238bb82e9351ac1252c41366&creativeASIN=B07PLPXPML",
+    description:
+      "Dragonhawk Kit de tatuaje Máquina Pen de Tatuaje Rotativa Tattoo Machine Pen tatuaje Fuente de alimentación de tatuaje...",
+    title:
+      "Dragonhawk Kit de tatuaje Máquina Pen de Tatuaje Rotativa Tattoo Machine Pen tatuaje Fuente de alimentación de tatuaje Agujas de pluma Tintas de tatuaje Maquinas Tattoo Kit Professional",
+    price: "EUR 129,00",
+    imgSrc:
+      "https://m.media-amazon.com/images/I/51DI51f6VkL._AC_AC_SR98,95_.jpg",
   },
 ];
 
@@ -60,26 +151,56 @@ const pageIndexProps = [
             Kit de tatuaje profesional
           </h1>
           <p class="pt-5 lg:pt-[2rem] text-xl">
-            Una maquina de tatuar profesional es aquella que está confeccionada
-            con materiales de primer nivel, mas resistentes al desgaste y suele
-            ser de una marca reconocida, que otorgue adecuadas garantías y
-            post-venta.
+            ¿Ya has adquirido la experiencia necesaria y quieres dar el
+            siguiente paso?
           </p>
           <p class="pt-5 lg:pt-[2rem] text-xl">
-            En relación a la función de crear un tatuaje, maquinas de tatuar
-            profesionales y maquinas de tatuar para principiantes cumplen con su
-            cometido. Sin embargo las máquinas profesionales suelen otorgar mas
-            versatilidades.
+            Hay algunas características a tener en cuenta: el precio, cuánto
+            durará y qué tipos de tatuajes puede entintar.
           </p>
           <p class="pt-5 lg:pt-[2rem] text-xl">
-            Los kits de maquinas profesionales suelen ser mas costosos que los
-            para principiantes por lo que antes de comprarlos sugerimos saber
-            bien si es el tipo de maquina adecuada para tus pretensiones.
+            Los profesionales del tatuaje siempre buscan formas de mejorar sus
+            habilidades y crear un entorno de trabajo más cómodo. Una de las
+            formas en que esto se puede lograr es mediante el uso de un kit de
+            tatuaje para profesionales.
           </p>
           <p class="pt-5 lg:pt-[2rem] text-xl">
-            No obstante lo anterior, los kits mas costosos lo son porque
-            efectivamente tienen factores diferenciadores como la calidad de sus
-            materiales, garantias, prestaciones, ergonomía, etc.
+            Cualquier tatuador serio necesita uno de estos kits para asegurarse
+            de que su trabajo se realiza correctamente.
+          </p>
+          <p class="pt-5 lg:pt-[2rem] text-xl">
+            Hay numerosos tipos de kits de tatuajes profesionales disponibles
+            para comprar, y varían según los materiales que se utilizan, la
+            cantidad de herramientas que vienen con ellos y cuánto cuestan. Lo
+            importante aquí es comprar un kit que tenga lo necesario para un
+            trabajo específico.
+          </p>
+          <div
+            class="flex flex-row justify-center flex-wrap lg:flex lg:flex-row lg:flex-wrap space-x-2 mb-5"
+          >
+            {
+              mejoreskitsPrincipiantesProps.map((article) => (
+                <ArticleCard articleProps={article} />
+              ))
+            }
+          </div>
+          <p class="pt-5 lg:pt-[2rem] text-xl">
+            El kit de tatuaje incluye todo lo que necesita para crear un tatuaje
+            de nivel profesional, incluidas tintas, agujas y otras herramientas.
+          </p>
+
+          <h2
+            id="tipos-maquinas-de-tatuar"
+            class="text-black text-3xl text-center mt-6 border-b-2 border-b-gray-400 pb-2"
+          >
+            Los mejores Kit de maquina de tatuar profesional
+          </h2>
+
+          <p class="pt-5 lg:pt-[2rem] text-xl">
+            Si bien estos kits son caros, son una muy buena opción para dar el
+            siguiente paso y perfeccionar tu trabajo, siempre es cómodo tener
+            todo lo necesario para obtener el acabado perfecto y así entregar el
+            mejor servicio al cliente.
           </p>
         </div>
       </div>
